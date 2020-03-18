@@ -102,7 +102,7 @@ belongs_to :item
 
 ### Association
 has_many :items
-has_one :category_brand_group
+<!-- has_one :category_brand_group -->
 has_one :brand_group, through: :category_brand_group
 has_ancestry
 
@@ -121,8 +121,7 @@ belongs_to :user
 |Column	|Type	|Options|
 |:------|:----|:------|
 |category_id	|references	|null: false, FK: true|
-|brand_id	|references	|null: false, FK: true|
-|name	¥string	|null: false|
+|name	|string	|null: false|
 
 ### Association
 has_many :item
@@ -131,10 +130,10 @@ belongs_to :category
 
 
 
-### brand-groups table
+<!-- ### brand-groups table
 |Column	|Type	|Options|
 |:------|:----|:------|
 |name	|string	|null: false|
 
 ### Association
-has_many :brands
+has_many :brands -->
