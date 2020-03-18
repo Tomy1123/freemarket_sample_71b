@@ -137,3 +137,4 @@ belongs_to :category
 
 ### Association
 has_many :brands -->
+
