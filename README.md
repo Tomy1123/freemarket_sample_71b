@@ -124,7 +124,7 @@ belongs_to :user
 |name	|string	|null: false|
 
 ### Association
-has_many :item
+has_many :items
 belongs_to :brand_group
 belongs_to :category
 
