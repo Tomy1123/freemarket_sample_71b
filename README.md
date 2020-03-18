@@ -27,11 +27,11 @@ Things you may want to cover:
 ### users　table
 |Column	|Type	|Options|
 |:------|:----|:------|
-|nickname |string¥null: |false	|
+|nickname |string¥null: false	|
 |family_name	|string	|null: false|
 |fairst_name	|string	|null: false |
 |family_name_kana	|string	|null: false|
-|first_name	|string	|null: false|
+|first_name_kana	|string	|null: false|
 |birth_year	|string	|null: false|
 |birth_month	|string	|null: false|
 |birth_day	|string	|null: false|
@@ -42,15 +42,8 @@ Things you may want to cover:
 
 ### Association
 has_many :items
-has_many :likes dependent: :destroy
 has_many :comments dependent: :destroy
-has many :messages dependent: :destroy
-has many :points dependent: :destroy
-has_many :social_providers dependent: :destroy
-has_one :deliver_adresses dependent: :destroy
-has_many :wallets dependent: :destroy
-has_many :reviews dependent: :destroy
-has_many :orders dependent: :destroy
+
 
 
 
@@ -72,13 +65,9 @@ has_many :orders dependent: :destroy
 belongs_to :user
 belongs_to :category
 belongs_to :brand
-has_many :likes dependent: :destroy
 has_many :comments dependent: :destroy
-has_many :messages dependent: :destroy
 has_one :shipping
-has_many :reviews
 has_many :item_images dependent: :destroy
-has_one :order
 
 
 
@@ -109,16 +98,20 @@ belongs_to :item
 |:------|:----|:-----|
 |path	|text	|null: false|
 |name	|string	|null: false|
-|ancestry	|string	|
+<!-- |ancestry	|string	| -->
 
 ### Association
-has_many :brands
 has_many :items
-has_one :category_size
-has_one :size, through: :category_size
 has_one :category_brand_group
 has_one :brand_group, through: :category_brand_group
 has_ancestry
 
-cards
-pay.jpで実装予定
+### cards table
+|Column	|type	|Option|
+|:------|:----|:-----|
+|user_id|integer|
+|customer_id|string|
+|card_id|string|
+
+### Association
+belongs_to :user
