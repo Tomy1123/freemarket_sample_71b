@@ -24,14 +24,14 @@ Things you may want to cover:
 * ...
 
 
-### users　table
+### users table
 |Column	|Type	|Options|
 |:------|:----|:------|
 |nickname |string｜null: false	|
 |family_name	|string	|null: false|
 |first_name	|string	|null: false |
 |family_name_kana	|string	|null: false|
-|first_name_kana	|string	|null: false|
+|first_name_kana	|	|null: false|
 |birth_year	|string	|null: false|
 |birth_month	|string	|null: false|
 |birth_day	|string	|null: false|
