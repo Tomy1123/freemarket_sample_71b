@@ -103,7 +103,7 @@ belongs_to :item
 ### Association
 has_many :items
 <!-- has_one :category_brand_group -->
-has_one :brand_group, through: :category_brand_group
+<!-- has_one :brand_group, through: :category_brand_group -->
 has_ancestry
 
 ### cards table
@@ -124,7 +124,7 @@ belongs_to :user
 |name	|string	|null: false|
 
 ### Association
-has_many :items
+has_many :itemss
 belongs_to :brand_group
 belongs_to :category
 
