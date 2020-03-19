@@ -1,0 +1,94 @@
+.home-main{
+  height: 100%;
+  background-color: rgb(245, 245, 245);
+  .home-main_header{
+    background-color: white;
+    height: 97px;
+    width: 100%;
+    &__headerInner{
+      max-width: 1040px;
+      width: 100%;
+      min-height: 82px;
+      margin: 0 auto;
+      padding: 15px 0 0;
+      &__mainHeader{
+        position: relative;
+        display: flex;
+        align-items: center;
+        &__icon{
+
+        }
+        &__searchBox{
+
+        }
+      }
+      &__nav{
+        font-size: 14px;
+        display: flex;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .home-main_mainVisual{
+    background-color: black;
+  }
+  .home-main_topIntroduction{
+    padding: 60px 20px;
+    width: 100%;
+    height: 658px;
+  }
+  .home-main_topMiddleDl{
+    padding: 42px 0px 100px;
+    &__ladys{
+      width: 1020px;
+      height: 584px;
+      background-color: yellow;
+    }
+    &__mens{
+      width: 1020px;
+      height: 584px;
+      background-color: red;
+    }
+    &__appliances{
+      width: 1020px;
+      height: 584px;
+      background-color: blue;
+    }
+    &__toy{
+      width: 1020px;
+      height: 584px;
+      background-color: chartreuse;
+    }
+  }
+  .home-main_topKeyFeatures{
+    padding: 60px 100px;
+    background-color: #fff;
+    width: 100%;
+    height: 733px;
+  }
+  .home-main_pickupContainer{
+    padding: 80px 0 0;
+    background-color: #f8f8f8;
+    height: 100%;
+  }
+  .home-main_pickupContainer{
+    padding: 80px 0 0;
+    background-color: #f8f8f8;
+    height: 100%;
+    &__brand-new{
+
+    }
+  }
+  .home-main_banner{
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #272727;
+  }
+  .home-main_footer{
+    padding: 60px 0;
+    color: #fff;
+    background-color: #272727;
+    text-align: center;
+  }
+}
