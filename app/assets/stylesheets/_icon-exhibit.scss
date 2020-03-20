@@ -1,4 +1,19 @@
-.icon-exhibit{
-  height: 160px;
-  width: 160px;
+.icon-exhibition{
+  width: 90px;
+  height: 86px;
+  z-index: 1;
+  background: #3CCACE;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+  .icon-exhibition_text{
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
 }
