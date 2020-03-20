@@ -3,64 +3,164 @@
     .home-main_header_headerInner
       .home-main_header_headerInner_mainHeader
         .home-main_header_headerInner_mainHeader_icon
+          = link_to image_tag("logo.png", :size => "140x40")
         .home-main_header_headerInner_mainHeader_searchBox
+          %form{ action: '/', method: 'post' }
+            %input{ name: 'seach', class: 'toppage-header-top__header-search--search-form',
+            placeholder: 'キーワードから探す' }
+          .home-main_header_headerInner_mainHeader_search-btn
+            -# = icon('fas', 'search', alt: 'search-icon',
+            = link_to image_tag("icon-search 1.png",
+            class: 'toppage-header-top__header-search--search-btn')
       .home-main_header_headerInner_nav
         %ul.home-main_header_headerInner_nav_listsLeft
-          %ui.home-main_header_headerInner_nav_listsLeftlistsLeft__item-first
-            カテゴリー
-          %ui.home-main_header_headerInner_nav_listsLeftlistsLeft__item
-            ブランド
+          %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item-first
+            %a.a(href="#")カテゴリー
+          %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item
+            %a.a(href="#")ブランド
         %ul.home-main_header_headerInner_nav_listsRight
           %ui.home-main_header_headerInner_nav_listsRight_item-login
-            ログイン
+            %a.a(href="#")ログイン
           %ui.home-main_header_headerInner_nav_listsRight_item-new
-            新規会員登録
+            %a.a(href="#")新規会員登録
   .home-main_mainVisual
-    = image_tag src = "bg-mainVisual-pict_pc.jpg", size: "1440x560"
-    %h2.home-main_mainVisual_content__subtitle
-      人生を買えるフリマアプリ
-    %p.home-main_mainVisual_content__text
-      FURIMAはだれでもかんたんにかんたんに出品・購入できる
-
-      フリマアプリです
-    .home-main_mainVisual_content__btn
-      %a(href="")
-      %a(href="")
+    .home-main_mainVisual_content
+      %h2.home-main_mainVisual_content_subtitle
+        人生を買えるフリマアプリ
+      %p.home-main_mainVisual_content_text
+        FURIMAはだれでもかんたんにかんたんに出品・購入できる
+        %br
+        フリマアプリです
+      .home-main_mainVisual_content_btn
+        %a.a= link_to image_tag("app-store.svg",:size => "180x53")
+        %a.a= link_to image_tag("google-play.svg",:size => "180x53")
   .home-main_topIntroduction
     %h2.home-main_topIntroduction_subtitle
       FURIMAが選ばれる３つの理由
     %ul.home-main_topIntroduction_lists
       %li.home-main_topIntroduction_lists_list
         .home-main_topIntroduction_lists_list_pict
+          = image_tag src = 'pict-reason-01.jpg', size: "306x306"
+          .home-main_topIntroduction_lists_list_pict_number
+            1
         %h3.home-main_topIntroduction_lists_list_text
-          "3分"
+          .a 3分
           ですぐに出品
         %p.home-main_topIntroduction_lists_list_description
           スマホで入力するだけで簡単に出品できる！
-    %ul.home-main_topIntroduction_lists
       %li.home-main_topIntroduction_lists_list
         .home-main_topIntroduction_lists_list_pict
+          = image_tag src = 'pict-reason-02.jpg', size: "306x306"
+          .home-main_topIntroduction_lists_list_pict_number
+            2
         %h3.home-main_topIntroduction_lists_list_text
-          "シンプル"
+          .a シンプル
           で使いやすい
         %p.home-main_topIntroduction_lists_list_description
           めんどくさい入力は必要なく、検索も購入もスムーズ！
-    %ul.home-main_topIntroduction_lists
       %li.home-main_topIntroduction_lists_list
         .home-main_topIntroduction_lists_list_pict
+          = image_tag src = 'pict-reason-03.jpg', size: "306x306"
+          .home-main_topIntroduction_lists_list_pict_number
+            3
         %h3.home-main_topIntroduction_lists_list_text
           手数料
-          "業界最安"
+          .a 業界最安
         %p.home-main_topIntroduction_lists_list_description
           最大3%でお得に出品&購入！
   .home-main_topMiddleDl
-    = image_tag src = 'bg-topMiddleDl-pict.jpg', size: "1440x400"
+    .home-main_topMiddleDl_inner
+      %h2.home-main_topMiddleDl_inner_subtitle
+        会員数日本一位
+      %p.home-main_topMiddleDl_inner_text
+        FURIMAは、フリマアプリで最も人気。
+        %br
+        出品・購入回数も業界最多です！
+        %br
+        ほしかったあの商品に出会えるかもしれなません。
+      .home-main_topMiddleDl_inner_dt
+        %a.a= link_to image_tag("app-store.svg",:size => "180x53")
+        %a.a= link_to image_tag("google-play.svg",:size => "180x53")
   .home-main_topKeyFeatures
+    %h2.home-main_topKeyFeatures_head
+      FURIMAの特徴
+    .home-main_topKeyFeatures_items
+      .home-main_topKeyFeatures_items_item
+        .home-main_topKeyFeatures_items_item_img
+          = image_tag src = 'icon-01.png', size: "219x337", class:"img"
+        %h3.home-main_topKeyFeatures_items_item_img_subtitle
+          簡単に売り買いできる
+        %p.home-main_topKeyFeatures_items_item_img_detail
+          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+      .home-main_topKeyFeatures_items_item
+        .home-main_topKeyFeatures_items_item_img
+          = image_tag src = 'icon-03.png', size: "219x337", class:"img"
+        %h3.home-main_topKeyFeatures_items_item_img_subtitle
+          売上金は即日振込みに対応
+        %p.home-main_topKeyFeatures_items_item_img_detail
+          午前９時までに振込み依頼をいただければ、、翌日に指定の口座に入金いたします！
+      .home-main_topKeyFeatures_items_item
+        .home-main_topKeyFeatures_items_item_img
+          = image_tag src = 'icon-04.png', size: "219x337", class:"img"
+        %h3.home-main_topKeyFeatures_items_item_img_subtitle
+          様々な支払いに対応
+        %p.home-main_topKeyFeatures_items_item_img_detail
+          お支払いは、クレジットカードだけでなく、、ポイントや売上金など多彩な方法があります。
   .home-main_pickupContainer
+    %h2.home-main_pickupContainer_head
+      ピックアップカテゴリー
     .home-main_pickupContainer_new
+      .home-main_pickupContainer_new_productHead
+        %a.a(href="#") 新規投稿商品
+      .home-main_pickupContainer_new_productLists
   .home-main_pickupContainer
-    .home-main_brand-new
+    %h2.home-main_pickupContainer_head
+      ピックアップブランド
+    .home-main_pickupContainer_brand-new
+      .home-main_pickupContainer_new_productHead
+        %a.a(href="#") アーカイバ
+      .home-main_pickupContainer_new_productLists
   .home-main_banner
-    = image_tag src = "bg-appBanner-pict.jpg", size: "1440x360"
+    .home-main_banner_inner
+      %h2.home-main_banner_inner_title
+        だれでもかんたん、、人生を買えるフリマアプリ
+      %p.home-main_banner_inner_text
+        今すぐ無料ダウンロード！
+      .home-main_banner_inner_icon
+        %a.a= link_to image_tag("app-store.svg",:size => "180x53")
+        %a.a= link_to image_tag("google-play.svg",:size => "180x53")
   .home-main_footer
-    .home-main_footer_icon
+    %ul.home-main_footer_contents
+      %li.home-main_footer_contents_content
+        %h2.home-main_footer_contents_content_head
+          FURIMAについて
+        %ul.home-main_footer_contents_content_box
+          %li.home-main_footer_contents_content_box_a
+            %a.a(href="#") 会社概要（運営会社)
+          %li.home-main_footer_contents_content_box_b
+            %a.a(href="#") プライバシーポリシー
+          %li.home-main_footer_contents_content_box_c
+            %a.a(href="#") FURIMA利用規約
+          %li.home-main_footer_contents_content_box_d
+            %a.a(href="#") ポイントに関する特約
+      %li.home-main_footer_contents_content
+        %h2.home-main_footer_contents_content_head
+          FURIMAを見る
+        %ul.home-main_footer_contents_content_box
+          %li.home-main_footer_contents_content_box_a
+            %a.a(href="#") カテゴリー一覧
+          %li.home-main_footer_contents_content_box_b
+            %a.a(href="#") ブランド一覧
+      %li.home-main_footer_contents_content
+        %h2.home-main_footer_contents_content_head
+          ヘルプ＆ガイド
+        %ul.home-main_footer_contents_content_box
+          %li.home-main_footer_contents_content_box_a
+            %a.a(href="#") FURIMAガイド
+          %li.home-main_footer_contents_content_box_b
+            %a.a(href="#") FURIMAロゴ利用ガイドライン
+          %li.home-main_footer_contents_content_box_c
+            %a.a(href="#") お知らせ
+    .home-main_footer_logo
+      = link_to image_tag("logo-white.png",:size => "160x46"),class:"img"
+    %p.p＠FURIMA
