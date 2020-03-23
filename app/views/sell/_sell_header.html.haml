@@ -1,0 +1,23 @@
+.home-main_header
+  .home-main_header_headerInner
+    .home-main_header_headerInner_mainHeader
+      .home-main_header_headerInner_mainHeader_icon
+        = link_to image_tag("logo.png", :size => "140x40")
+      .home-main_header_headerInner_mainHeader_searchBox
+        %form{ action: '/', method: 'post' }
+          %input{ name: 'seach', class: 'toppage-header-top__header-search--search-form',
+          placeholder: 'キーワードから探す' }
+        .home-main_header_headerInner_mainHeader_search-btn
+          -# = icon('fas', 'search', alt: 'search-icon',
+          = link_to image_tag("icon-search 1.png",class: 'toppage-header-top__header-search--search-btn')
+    .home-main_header_headerInner_nav
+      %ul.home-main_header_headerInner_nav_listsLeft
+        %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item-first
+          =link_to "カテゴリー","#",class: "a"
+        %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item
+          =link_to "ブランド","#",class: "a"
+      %ul.home-main_header_headerInner_nav_listsRight
+        %ui.home-main_header_headerInner_nav_listsRight_item-login
+          =link_to "ログイン","#",class: "a"
+        %ui.home-main_header_headerInner_nav_listsRight_item-new
+          =link_to "新規会員登録","#",class: "a"
