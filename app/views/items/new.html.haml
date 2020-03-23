@@ -28,7 +28,8 @@
           .sell-main_text_style-body_Family
             .sell-main_text_style-body_Family_label 出品情報
             .sell-main_text_style-body_Family_span 必須
-          
+          = f.text_area :description, { class: 'sell-main_text_style-body_textarea', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', rows: '5' }
+          .sell-main_text_style-body_formerror 入力してください
       .sell-main_categorie
       .sell-main_delivery
       .sell-main_exhibition

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_id: one
+  shipping_id: one
+  brand_id: one
+  seller_user_id: one
+  name: MyString
+  text: MyText
+  condition: 1
+  price: 1
+  trading_status: 1
+  completed_at: 2020-03-23 17:09:20
+
+two:
+  category_id: two
+  shipping_id: two
+  brand_id: two
+  seller_user_id: two
+  name: MyString
+  text: MyText
+  condition: 1
+  price: 1
+  trading_status: 1
+  completed_at: 2020-03-23 17:09:20
