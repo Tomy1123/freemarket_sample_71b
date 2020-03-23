@@ -1,0 +1,136 @@
+商品出品haml
+
+.sell-container
+  = render 'single-header'
+  %main.sell-main
+    %section.sell-main_container
+      #sell-container
+        %div
+          .sell-main_inner
+            %h2.sell-main__head 商品の情報を入力
+            = form_with model: @product, url: sell_index_path, class:'sell-main__form' do |f|
+              .sell-main_upload-box
+                %h3.sell-main_upload-head
+                  出品画像
+                  %span.sell-main__form-require 必須
+                %p 最大10枚までアップロードできます
+                .sell-main_dropbox-container.clearfix.state-image-number-10
+                  .sell-main_upload-items-container
+                    .sell-main_upload-items.sell-main_upload-items--have-item-0{ id: 'sell-main__upload-items' }
+                      %ul.clearfix{ id: 'output' }
+                        = f.label :images, class: 'sell-main__upload-label', id: 'dropArea' do
+                          .sell-main_upload-drop-box.sell-main_upload-drop-box--have-item-0{ id: 'sell-main__upload-drop-box' }
+                            = f.file_field :images, multiple: true, class: 'sell-main__upload-drop-file', style: 'display: none;'
+                            %pre.sell-main_visible-pc
+                              ドラッグアンドドロップ
+                              またはクリックしてファイルをアップロード
+                            %i.fas.fa-camera         
+                    = render partial: 'error-messages', locals: { product: @product.errors, column: 'images'}
+              .sell-main_content
+                .sell-main_form-group
+                  = f.label :name do
+                    商品名
+                    %span.sell-main_form-require 必須
+                  %div
+                    = f.text_field :name, { class:'sell-main__input-default', placeholder: '商品名（必須 40文字まで)' }
+                  = render partial: 'error-messages', locals: {product: f.object, column: 'name'}
+                .sell-main_form-group
+                  = f.label :description do
+                    商品の説明
+                    %span.sell-main_form-require 必須
+                  = f.text_area :description, { class: 'sell-main__textarea-default', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', rows: '5' }
+                  = render partial: 'error-messages', locals: {product: @product, column: ' description'}
+              .sell-main_content.clearfix
+                %h3.sell-main_sub-head 商品の詳細
+                .sell-main_form-box{ id: 'sell-main__form-box--detail' }
+                  .sell-main_form-group
+                    = f.label :category_id do
+                      カテゴリー
+                      %span.sell-main_form-require 必須
+                    %div{ id: 'sell-main__select-category--wrapper' }
+                      .sell-main_select-wrap
+                        %i.fas.fa-chevron-down
+                        = f.collection_select :category_id, Category.where(sub: '0'), :id, :name, { prompt: '--' }, class: 'sell-main__select-default', id: 'sell-main__select-category--main'
+                    =  render partial: 'error-messages', locals: {product: @product, column: ' category_id'}
+                  .sell-main__form-group
+                    = f.label :condition do
+                      商品の状態
+                      %span.sell-main_form-require 必須
+                    .sell-main_select-wrap
+                      %i.fas.fa-chevron-down
+                      = f.collection_select :condition_id, Condition.all, :id, :value, { prompt: '--' }, class: 'sell-main__select-default'
+                    = render partial: 'error-messages', locals: {product: @product, column: ' condition_id'}
+              .sell-main_content.clearfix
+                %h3.sell-main_sub-head 配送について
+                %a.sell-main_form-question{ href: '#', target: '_blank' }
+                  ?
+                .sell-main_form-box
+                  .sell-main_form-group{ id: 'sell-main__form-group--delivery-charge'}
+                    = f.label :delivery_charge_id do
+                      配送料の負担
+                      %span.sell-main_form-require 必須
+                    .sell-main_select-wrap
+                      %i.fas.fa-chevron-down
+                      = f.collection_select :delivery_charge_id, DeliveryCharge.all, :id, :value, { prompt: '--' }, class: 'sell-main__select-default'
+                    = render partial: 'error-messages', locals: {product: @product, column: ' delivery_charge_id'}
+                  .sell-main_form-group
+                    = f.label :delivery_area_id do
+                      発送元の地域
+                      %span.sell-main_form-require 必須
+                    .sell-main_select-wrap
+                      %i.fas.fa-chevron-down
+                      = f.collection_select :prefecture_id, Prefecture.all, :id, :name, { prompt: '--' }, class: 'sell-main__select-default'
+                    = render partial: 'error-messages', locals: {product: @product, column: ' prefecture_id'}
+                  .sell-main_form-group
+                    = f.label :delivery_days do
+                      発送までの日数
+                      %span.sell-main_form-require 必須
+                    .sell-main_select-wrap
+                      %i.fas.fa-chevron-down
+                      = f.collection_select :delivery_days_id, DeliveryDays.all, :id, :value, { prompt: '--' }, class: 'sell-main__select-default'
+                    = render partial: 'error-messages', locals: {product: @product, column: ' delivery_days_id'}
+              .sell-main_content.clearfix
+                %h3.sell-main_sub-head
+                販売価格(300〜9,999,999)
+                %a.sell-main_form-question{ href: '#', target: '_blank' }
+                  ?
+                .sell-main_form-box
+                  %ul.sell-main_price
+                    %li.sell-main_form-group
+                      .clearfix
+                        = f.label :price, class: 'sell-main__left' do
+                          価格
+                          %span.sell-main_form-require 必須
+                        .sell-main_right.sell-main_price-input 
+                          ¥
+                          %div
+                            = f.text_field :price, { class: 'sell-main__input-default',id: 'sell-main__price-input', placeholder: '例）300',  value: '' }
+                        = render partial: 'error-messages', locals: {product: @product, column: ' price'}
+                    %li.clearfix
+                      .sell-main_left
+                        販売手数料 (10%)
+                      .sell-main_right{ id: 'sell-main__fee' } -
+                    %li.clearfix.bold
+                      .sell-main_left 販売利益
+                      .sell-main_right{ id: 'sell-main__profit' } -
+              .sell-main_modal{ role: 'dialog', abindex: '-1' }
+                .sell-main_modal-inner
+              .sell-main_content.sell-main_btn-box
+                %div
+                  %p
+                    = link_to '禁止されている出品', '#', target: '_blank'
+                    、
+                    = link_to '行為', '#', target: '_blank'
+                    を必ずご確認ください。
+                  %p
+                    またブランド品でシリアルナンバー等がある場合はご記載ください。
+                    = link_to '偽ブランドの販売', '#', target: '_blank'
+                    は犯罪であり処罰される可能性があります。
+                  %p
+                    また、出品をもちまして
+                    = link_to '加盟店規約', '#'
+                    に同意したことになります。
+                = f.submit '出品する', class: 'sell-main__btn-default sell-main__btn-red'
+                = link_to root_path, class: 'sell-main__btn-default sell-main__btn-gray' do
+                  もどる
+  = render 'signup/footer'
