@@ -1,27 +1,5 @@
 .home-main
-  .home-main_header
-    .home-main_header_headerInner
-      .home-main_header_headerInner_mainHeader
-        .home-main_header_headerInner_mainHeader_icon
-          = link_to image_tag("logo.png", :size => "140x40")
-        .home-main_header_headerInner_mainHeader_searchBox
-          %form{ action: '/', method: 'post' }
-            %input{ name: 'seach', class: 'toppage-header-top__header-search--search-form',
-            placeholder: 'キーワードから探す' }
-          .home-main_header_headerInner_mainHeader_search-btn
-            -# = icon('fas', 'search', alt: 'search-icon',
-            = link_to image_tag("icon-search 1.png",class: 'toppage-header-top__header-search--search-btn')
-      .home-main_header_headerInner_nav
-        %ul.home-main_header_headerInner_nav_listsLeft
-          %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item-first
-            =link_to "カテゴリー","#",class: "a"
-          %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item
-            =link_to "ブランド","#",class: "a"
-        %ul.home-main_header_headerInner_nav_listsRight
-          %ui.home-main_header_headerInner_nav_listsRight_item-login
-            =link_to "ログイン","#",class: "a"
-          %ui.home-main_header_headerInner_nav_listsRight_item-new
-            =link_to "新規会員登録","#",class: "a"
+  = render "sell_header"
   .home-main_mainVisual
     .home-main_mainVisual_content
       %h2.home-main_mainVisual_content_subtitle
@@ -128,38 +106,4 @@
       .home-main_banner_inner_icon
         %a.a= link_to image_tag("app-store.svg",:size => "180x53")
         %a.a= link_to image_tag("google-play.svg",:size => "180x53")
-  .home-main_footer
-    %ul.home-main_footer_contents
-      %li.home-main_footer_contents_content
-        %h2.home-main_footer_contents_content_head
-          FURIMAについて
-        %ul.home-main_footer_contents_content_box
-          %li.home-main_footer_contents_content_box_a
-            =link_to "会社概要（運営会社)","#",class: "a"
-          %li.home-main_footer_contents_content_box_b
-            =link_to "プライバシーポリシー","#",class: "a"
-          %li.home-main_footer_contents_content_box_c
-            =link_to "FURIMA利用規約","#",class: "a"
-          %li.home-main_footer_contents_content_box_d
-            =link_to "ポイントに関する特約","#",class: "a"
-      %li.home-main_footer_contents_content
-        %h2.home-main_footer_contents_content_head
-          FURIMAを見る
-        %ul.home-main_footer_contents_content_box
-          %li.home-main_footer_contents_content_box_a
-            =link_to "カテゴリー一覧","#",class: "a"
-          %li.home-main_footer_contents_content_box_b
-            =link_to "ブランド一覧","#",class: "a"
-      %li.home-main_footer_contents_content
-        %h2.home-main_footer_contents_content_head
-          ヘルプ＆ガイド
-        %ul.home-main_footer_contents_content_box
-          %li.home-main_footer_contents_content_box_a
-            =link_to "FURIMAガイド","#",class: "a"
-          %li.home-main_footer_contents_content_box_b
-            =link_to "FURIMAロゴ利用ガイドライン","#",class: "a"
-          %li.home-main_footer_contents_content_box_c
-            =link_to "お知らせ","#",class: "a"
-    .home-main_footer_logo
-      = link_to image_tag("logo-white.png",:size => "160x46"),class:"img"
-    %p.p＠FURIMA
+  = render "sell_footer"
