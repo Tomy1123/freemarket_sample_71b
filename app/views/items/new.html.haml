@@ -1,9 +1,35 @@
 .sell-container
   = render 'single-header'
   .sell-main
-    .sell-main_img
-    .sell-main_text
-    .sell-main_categorie
-    .sell-main_delivery
-    .sell-main_exhibition
+    = form_with model: @product, url: sell_index_path, class:'sell-main__form' do |f|
+      .sell-main_img
+        .sell-main_img_body
+          .sell-main_img_Family
+            .sell-main_img_Family_label 出品情報
+            .sell-main_img_Family_span 必須
+          .sell-main_img_Family_style-body 最大10枚までアップロードできます
+          .sell-main_img_Family_img-upload
+            .sell-main_img_Family_img-upload_hsmaqh
+            .sell-main_img_Family_img-upload_hsmaqh_btn
+              .sell-main_img_Family_img-upload_hsmaqh_btn_icon
+            .sell-main_img_Family_img-upload_hsmaqh_btn_text 
+              ドラックアンドドロップ 
+              %rb
+              またはクリックしてファイルをアップロード
+          .sell-main_img_body_formerror 画像がありません
+      .sell-main_text
+        .sell-main_text_body
+          .sell-main_text_body_Family
+            .sell-main_text_body_Family_label 出品情報
+            .sell-main_text_body_Family_span 必須
+          = f.text_field :name, { class:'sell-main_text_body_input-default', placeholder: '商品名（必須 40文字まで)' }
+          .sell-main_text_body_formerror 入力してください
+        .sell-main_text_style-body
+          .sell-main_text_style-body_Family
+            .sell-main_text_style-body_Family_label 出品情報
+            .sell-main_text_style-body_Family_span 必須
+          
+      .sell-main_categorie
+      .sell-main_delivery
+      .sell-main_exhibition
   = render 'registration-footer'
