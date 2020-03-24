@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.my-nav{
+  width: 100%;
+  height: 49px;
+}
+.my-main{
+  width: 100%;
+  height: 1300px;
+
+}
+
+.my-banner{
+  width: 100%;
+  height: 260px;
+  background-image: image-url("bg-appBanner-pict.jpg");
+  padding: 100px 40px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
