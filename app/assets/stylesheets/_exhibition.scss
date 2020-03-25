@@ -1,4 +1,204 @@
 .sell-container{
   @import "home_header";
+  .sell-main{
+    max-width: 700px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0px auto;
+    .sell-main__form{
+      padding: 40px;
+      .sell-main_img{
+        .sell-main_img_body{
+          .sell-main_img_Family{
+            .sell-main_img_Family_label{
+
+            }
+            .sell-main_img_Family_span{
+
+            }
+          }
+          .sell-main_img_Family_style-body{
+
+          }
+          .sell-main_img_Family_img-upload{
+            .sell-main_img_Family_img-upload_items{
+
+            }
+            .sell-main_img_Family_img-upload_hsmaqh{
+
+            }
+            .sell-main_img_Family_img-upload_hsmaqh_btn{
+              .sell-main_img_Family_img-upload_hsmaqh_btn_icon{
+
+              }
+            }
+            .sell-main_img_Family_img-upload_hsmaqh_btn_text{
+
+            }
+          }
+          .sell-main_img_body_formerror{
+
+          }
+        }
+      }
+      .sell-main_text{
+        .sell-main_text_body{
+          .sell-main_text_body_Family{
+            .sell-main_text_body_Family_label{
+
+            }
+            .sell-main_text_body_Family_span{
+
+            }
+          }
+          .sell-main_text_body_input-default{
+
+          }
+          .sell-main_text_body_formerror{
+
+          }
+        }
+        .sell-main_text_style-body{
+          .sell-main_text_style-body_Family{
+            .sell-main_text_style-body_Family_label{
+
+            }
+            .sell-main_text_style-body_Family_span{
+
+            }
+          }
+          .sell-main_text_style-body_textarea{
+
+          }
+          .sell-main_text_style-body_formerror{
+
+          }
+        }
+      }
+      .sell-main_categorie{
+        .sell-main_categorie_title{
+
+        }
+        .sell-main_categorie_body{
+          .sell-main_categorie_body_Family{
+            .sell-main_categorie_body_Family_label{
+
+            }
+            .sell-main_categorie_body_Family_span{
+
+            }
+          }
+          .parent_category{
+
+          }
+        }
+        .sell-main_categorie_body{
+          .sell-main_categorie_body_Family{
+            .sell-main_categorie_body_Family_label{
+
+            }
+            .sell-main_categorie_body_Family_span{
+
+            }
+          }
+          .sell-main_text_body_input-default{
+
+          }
+        }
+        .sell-main_categorie_body{
+          .sell-main_categorie_body_Family{
+            .sell-main_categorie_body_Family_label{
+
+            }
+            .sell-main_categorie_body_Family_span{
+
+            }
+          }
+          .parent_category{
+
+          }
+        }
+      }
+      .sell-main_delivery{
+        .sell-main_delivery_title{
+
+        }
+        .sell-main_delivery_body{
+          .sell-main_delivery_body_Family{
+            .sell-main_delivery_body_Family_label{
+
+            }
+            .sell-main_delivery_body_Family_span{
+
+            }
+          }
+          .parent_category{
+
+          }
+        }
+        .sell-main_delivery_body{
+          .sell-main_delivery_body_Family{
+            .sell-main_delivery_body_Family_label{
+
+            }
+            .sell-main_delivery_body_Family_span{
+
+            }
+          }
+          .parent_category{
+
+          }
+          .sell-main_delivery_body_Family{
+            .sell-main_delivery_body_Family_label{
+
+            }
+            .sell-main_delivery_body_Family_span{
+
+            }
+          }
+          .parent_category{
+
+          }
+        }
+      }
+      .sell-main_exhibition{
+        .sell-main_exhibition_title{
+        }
+        .sell-main_delivery_body{
+          .sell-main_delivery_body_Family{
+            .sell-main_delivery_body_Family_label{
+
+            }
+            .sell-main_delivery_body_Family_span{
+
+            }
+            .sell-main_delivery_body_Family_right{
+
+            }
+            .sell-main_delivery_body_Family_left{
+
+            }
+            .sell-main_delivery_body_Family_bold{
+
+            }
+            .sell-main_delivery_body_Family_btn{
+              .sell-main_delivery_body_Family_btn_a{
+
+              }
+              .sell-main_delivery_body_Family_btn_b{
+
+              }
+              .sell-main_delivery_body_Family_btn_c{
+
+              }
+            }
+            .sell-content.sell-btn-box{
+
+            }
+          }
+        }
+      }
+    }
+  }
   @import "home_footer";
 }
