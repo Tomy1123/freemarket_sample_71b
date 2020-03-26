@@ -1,0 +1,74 @@
+.home-main_header
+  .home-main_header_headerInner
+    .home-main_header_headerInner_mainHeader
+      .home-main_header_headerInner_mainHeader_icon
+        = link_to image_tag("logo.png", :size => "140x40")
+      .home-main_header_headerInner_mainHeader_searchBox
+        %form{ action: '/', method: 'post' }
+          %input{ name: 'seach', class: 'toppage-header-top__header-search--search-form',
+          placeholder: 'キーワードから探す' }
+        .home-main_header_headerInner_mainHeader_search-btn
+          -# = icon('fas', 'search', alt: 'search-icon',
+          = link_to image_tag("icon-search 1.png",class: 'toppage-header-top__header-search--search-btn')
+    .home-main_header_headerInner_nav
+      %ul.home-main_header_headerInner_nav_listsLeft
+        %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item-first
+          =link_to "カテゴリー","#",class: "a"
+        %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item
+          =link_to "ブランド","#",class: "a"
+.my-nav
+  %ul.my-nav_nav
+    %il.nav1 
+    = link_to "フリマ","#",class:"a"
+    %li.nav2 マイページ
+.my-main
+  .side
+    %ul.side-list
+      %li.nav3 
+        = link_to "プロフィール","#",class:"a"
+      %li.nav4
+        = link_to "お知らせ","#",class:"a"
+      %li.nav4
+        = link_to "出品する","#",class:"a"
+      %li.nav4
+        = link_to "下書き一覧","#",class:"a"
+      %li.nav4
+        = link_to "出品した商品-出品一覧","#",class:"a"
+      %li.nav4
+        = link_to "出品した商品-取引中","#",class:"a"
+      %li.nav4
+        = link_to "出品した商品-売却済み","#",class:"a"
+      %li.nav4
+        = link_to "購入した商品-取引中","#",class:"a"
+      %li.nav4
+        = link_to "購入した商品-過去の取引","#",class:"a"
+      %li.nav4
+        = link_to "ニュース一覧","#",class:"a"
+      %li.nav4
+        = link_to "評価一覧","#",class:"a"
+      %li.nav4
+        = link_to "本人情報","#",class:"a"
+      %li.nav4
+        = link_to "お問い合わせ","#",class:"a"
+      %li.nav4
+        = link_to "支払い方法","#",class:"a"
+      %li.nav4
+        = link_to "ログアウト","#",class:"a"
+  .content
+    .user
+      .userpro
+        .myuser
+          = link_to "チョコパイ","#",class:"a"
+    .sirase
+      %ul.mypage
+        %li.active お知らせ
+        %li.active2 やることリスト
+      %ul.come
+        %li.comels お知らせはありません
+.my-banner
+.my-footer
+  =render "sell/sell_footer"
+.my-btn
+  =render "sell/exhibit_ion"
+
+ 

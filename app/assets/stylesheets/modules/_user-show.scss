@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.home-main_header{
+  border-bottom: 1px;
+  border-color: black;
+}
+
+.my-nav{
+  width: 100%;
+  height: 49px;
+  padding: 0px 60px;
+  border-top: 1px solid #eee;
+  line-height: 49px;
+   ul.my-nav_nav{
+     display: flex;
+     margin: 0px 89.5px;
+     padding: 0px 60px;
+     a {
+       text-decoration: none;
+       padding-right: 20px;
+     }
+   }
+}
+.my-main{
+  width: 100%;
+  height: 1000px;
+  padding: 40px 180px;
+  background-color: #f5f5f5;
+  .side{
+    width: 280px;
+    float: left;
+    text-align: center;
+    background-color: #ffff;
+    line-height: 50px;
+    ul.side-list{
+      li.nav3{
+        height: 50px;
+          a{
+            text-decoration: none;
+          }
+      }
+      li.nav4{
+        height: 50px;
+        border-top: 1px solid #eee;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .content{
+    width: 700px;
+    height: 700px;
+    float: right;
+    text-align: center;
+    background-color: white;
+    .user{
+      height: 200px;
+      background-color: yellowgreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .userpro{
+        height: 111px;
+        width: 500px;
+        a{
+          text-decoration: none;
+          line-height: 111px;
+        }
+      }
+    }
+    .sirase{
+      height: 500px;
+      ul.mypage{
+        height: 200px;
+        display: flex;
+        li.active{
+          width: 350px;
+          height: 100px;
+          border-top: solid 1px red;
+          line-height: 100px;
+        }
+        li.active2{
+          width: 350px;
+          height: 100px;
+          background-color: #eee;
+          line-height: 100px;
+        }
+      }
+    }
+  }
+}
+
+.my-banner{
+  width: 100%;
+  height: 260px;
+  background-image: image-url("bg-appBanner-pict.jpg");
+  padding: 100px 40px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
