@@ -1,0 +1,40 @@
+.item-header
+  =render "sell/sell_header"
+.item-root
+  %ul.list
+    %li.nav
+      = link_to "FURIMA >","#",class:"a"
+    %li.nav
+      = link_to "メンズ >","#",class:"a"
+    %li.nav
+      = link_to "ジャケット >","#",class:"a"
+    %li.nav
+      = link_to "ノーカラージャケット >","#",class:"a"
+    %li.nav
+      = link_to "product2","#",class:"a"
+.item-main
+  .item-show
+    .content
+      .item-box
+        .name 折り紙
+        .body
+          %ul.listbox
+            %li.list
+        .price ¥2000
+        .deta 転売
+        .table
+        .op
+    .come
+.home-main_banner
+  .home-main_banner_inner
+    %h2.home-main_banner_inner_title
+      だれでもかんたん、、人生を買えるフリマアプリ
+    %p.home-main_banner_inner_text
+      今すぐ無料ダウンロード！
+    .home-main_banner_inner_icon
+      %a.a= link_to image_tag("app-store.svg",:size => "180x53")
+      %a.a= link_to image_tag("google-play.svg",:size => "180x53")
+.item-footer
+  =render "sell/sell_footer"
+.item-btn
+  =render "sell/exhibit_ion"
