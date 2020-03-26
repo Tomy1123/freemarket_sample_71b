@@ -5,4 +5,8 @@ class ItemsController < ApplicationController
     @parent = Categorie.where(id: 1..13)
 
   end
+  
+  def show
+  end
+
 end
