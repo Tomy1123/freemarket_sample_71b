@@ -8,21 +8,44 @@
     .sell-main__form{
       padding: 40px;
       .sell-main_img{
+        border-bottom: 1px solid #eee;
+        padding: 40px;
         .sell-main_img_body{
           .sell-main_img_Family{
+            display: flex;
             .sell-main_img_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_img_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .sell-main_img_Family_style-body{
-
+            margin-top: 14px;
           }
           .sell-main_img_Family_img-upload{
             .sell-main_img_Family_img-upload_items{
-
+              background-color: blueviolet;
+              width: 200px;
+              height: 200px;
+              .form__mask__image{
+                margin-top: 14px;
+                position: relative;
+                .hidden{
+                  display: none;
+                }
+                .icon{
+                  position: absolute;
+                  left: 50px;
+                  color: black;
+                }
+              }
             }
             .sell-main_img_Family_img-upload_hsmaqh{
 
@@ -42,94 +65,160 @@
         }
       }
       .sell-main_text{
+        border-bottom: 1px solid #eee;
+        padding: 40px;
         .sell-main_text_body{
           .sell-main_text_body_Family{
+            display: flex;
             .sell-main_text_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_text_body_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .sell-main_text_body_input-default{
-
+            margin-top: 14px;
+            height: 48px;
+            width: 100%;
           }
           .sell-main_text_body_formerror{
-
+            
           }
         }
         .sell-main_text_style-body{
+          margin-top: 14px;
           .sell-main_text_style-body_Family{
+            display: flex;
             .sell-main_text_style-body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_text_style-body_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .sell-main_text_style-body_textarea{
-
+            margin-top: 14px;
+            height: 150px;
+            width: 100%;
           }
           .sell-main_text_style-body_formerror{
-
+            
           }
         }
       }
       .sell-main_categorie{
+        border-bottom: 1px solid #eee;
+        padding: 40px;
         .sell-main_categorie_title{
-
+          color: rgb(136, 136, 136);
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.4em;
+          margin-bottom: 24px;
         }
         .sell-main_categorie_body{
           .sell-main_categorie_body_Family{
+            display: flex;
             .sell-main_categorie_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_categorie_body_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
-          .parent_category{
-
+          .sell-main_categorie_body_select{
+            width: 100%;
+            height: 48px;
           }
         }
         .sell-main_categorie_body{
+          margin-top: 14px;
           .sell-main_categorie_body_Family{
+            margin-bottom: 14px;
+            display: flex;
             .sell-main_categorie_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
-            .sell-main_categorie_body_Family_span{
-
+            .sell-main_categorie_body_Family_span1{
+              background-color: #bfbfbf;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .sell-main_text_body_input-default{
-
+            width: 100%;
+            height: 48px;
           }
         }
         .sell-main_categorie_body{
+          margin-top: 14px;
           .sell-main_categorie_body_Family{
+            display: flex;
             .sell-main_categorie_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_categorie_body_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .parent_category{
-
+            width: 100%;
+            height: 48px;
           }
         }
       }
       .sell-main_delivery{
+        border-bottom: 1px solid #eee;
+        padding: 40px;
         .sell-main_delivery_title{
-
+          width: 100%;
+            height: 48px;
         }
         .sell-main_delivery_body{
+          margin-top: 14px;
           .sell-main_delivery_body_Family{
+            margin-bottom: 14px;
+            display: flex;
             .sell-main_delivery_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_delivery_body_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .parent_category{
@@ -137,23 +226,41 @@
           }
         }
         .sell-main_delivery_body{
+          margin-top: 14px;
           .sell-main_delivery_body_Family{
+            margin-bottom: 14px;
+            display: flex;
             .sell-main_delivery_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_delivery_body_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .parent_category{
 
           }
           .sell-main_delivery_body_Family{
+            margin-top: 14px;
+            margin-bottom: 14px;
+            display: flex;
             .sell-main_delivery_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_delivery_body_Family_span{
-
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
           .parent_category{
@@ -162,41 +269,100 @@
         }
       }
       .sell-main_exhibition{
+        margin-bottom: 14px;
         .sell-main_exhibition_title{
+          margin-top: 26px;
+          color: rgb(136, 136, 136);
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1.4em;
+          margin-bottom: 24px;
         }
         .sell-main_delivery_body{
+          display: flex;
+          margin-top: 14px;
           .sell-main_delivery_body_Family{
+            margin-top: 14px;
+            margin-right: 250px;
+            display: flex;
             .sell-main_delivery_body_Family_label{
-
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 1.4em;
             }
             .sell-main_delivery_body_Family_span{
-
-            }
-            .sell-main_delivery_body_Family_right{
-
-            }
-            .sell-main_delivery_body_Family_left{
-
-            }
-            .sell-main_delivery_body_Family_bold{
-
-            }
-            .sell-main_delivery_body_Family_btn{
-              .sell-main_delivery_body_Family_btn_a{
-
-              }
-              .sell-main_delivery_body_Family_btn_b{
-
-              }
-              .sell-main_delivery_body_Family_btn_c{
-
-              }
-            }
-            .sell-content.sell-btn-box{
-
+              height: 20px;
+              background-color: #ff0211;
+              color: #fff;
+              font-size: 12px;
+              padding: 0 4px;
+              margin-left: 5px;
             }
           }
+          .sell-main_delivery_body_Family_right{
+            height: 48px;
+            margin-top: 14px;
+            .parent_category{
+              height: 48px;
+              width: 260px;
+            }
+          }
+        }  
+      }
+      .sell-main_delivery_body_Family_left{
+        display: flex;
+        height: 48px;
+        border-bottom: 1px solid #eee;
+        .handling_charge.l-right{
+          margin-left: 450px;
         }
+      }
+      .sell-main_delivery_body_Family_bold{
+        display: flex;
+        margin-top: 26px;
+        margin-bottom: 60px;
+        .profitFee.l-right{
+          margin-left: 518px;
+        }
+      }
+      .sell-main_delivery_body_Family_btn{
+        margin-bottom: 32px;
+        width: 360px;
+        margin: 0px auto 24px;
+        .sell-main_delivery_body_Family_btn_a{
+          height: 48px;
+          background-color: #ea352d;
+          text-align: center;
+          margin-bottom: 24px;
+          .a{
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+        .sell-main_delivery_body_Family_btn_b{
+          height: 48px;
+          text-align: center;
+          background-color: #ccc;
+          border-color: transparent;
+          margin-bottom: 24px;
+          .a{
+            text-decoration: none;
+            color: #222;
+          }
+        }
+        .sell-main_delivery_body_Family_btn_c{
+          border-color: transparent;
+          text-align: center;
+          margin-bottom: 24px;
+          .a{
+            text-decoration: none;
+            color: #0095ee;
+          }
+        }
+      }
+      .sell-content.sell-btn-box{
+        font-size: 12px;
+        line-height: 1.4em;
       }
     }
   }
