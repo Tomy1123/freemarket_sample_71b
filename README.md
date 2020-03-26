@@ -96,7 +96,7 @@ belongs_to :item
 ### categories table
 |Column	|type	|Option|
 |:------|:----|:-----|
-|path	|text	|null: false|
+|ancestry	|text	|null: false|
 |name	|string	|null: false|
 <!-- |ancestry	|string	| -->
 
