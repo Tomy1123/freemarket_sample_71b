@@ -7,13 +7,13 @@ class ItemsController < ApplicationController
   end
   
   def show
-    @item = Item.find_by(id: params[:id])
-    @categorie = Categorie.find_by(id: @item.category_id)
+    @item = Item.find_by(params[:id])
+    @categorie = @item.name
+    # @parentcategory=@categorie.parent
   end
   
   def create
     @item = Item.new(item_params)
-    binding.pry
     if @item.save
       # redirect_to root_path
     else
@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item)
-            .permit( :name, :text, :condition, :price, :trading_status, :category_id)
+            .permit( :name, :text, :category_id, :brand, :condition, :trading_status, :trading_status, :delivery_days, :price,  )
   end
 
 end
