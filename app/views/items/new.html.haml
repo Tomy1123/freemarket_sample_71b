@@ -31,7 +31,7 @@
           .sell-main_text_style-body_Family
             .sell-main_text_style-body_Family_label 商品の説明
             .sell-main_text_style-body_Family_span 必須
-          = f.text_area :description, { class: 'sell-main_text_style-body_textarea', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', rows: '5' }
+          = f.text_area :text, { class: 'sell-main_text_style-body_textarea', placeholder: '商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。', rows: '5' }
           .sell-main_text_style-body_formerror
       .sell-main_categorie
         .sell-main_categorie_title 商品の詳細
@@ -39,33 +39,33 @@
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label カテゴリー
             .sell-main_categorie_body_Family_span 必須
-          = f.collection_select :parent_id, @parent.all, :id, :name, prompt:"選択して下さい", class: "sell-main_categorie_body_select", name: "parent_box"
+          = f.collection_select :category_id, @parent.all, :id, :name, prompt:"選択して下さい", class: "sell-main_categorie_body_select", name: "parent_box"
         .sell-main_categorie_body
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label ブランド
             .sell-main_categorie_body_Family_span1s 任意
-          = f.text_field :name, { class:'sell-main_text_body_input-default', placeholder: '例）シャネル' }
+          = f.text_field :brand, { class:'sell-main_text_body_input-default', placeholder: '例）シャネル' }
         .sell-main_categorie_body
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label 商品の状態
             .sell-main_categorie_body_Family_span 必須
-          = f.collection_select :product_id, @product.all, :id, :name, prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.collection_select :condition, @product.all, :id, :name, prompt:"選択して下さい", class: "parent_category", name: "parent_box"
       .sell-main_delivery
         .sell-main_delivery_title 配送について
         .sell-main_delivery_body
           .sell-main_delivery_body_Family
             .sell-main_delivery_body_Family_label 配送の負担
             .sell-main_delivery_body_Family_span 必須
-          = f.select :postage_burden, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]],prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :trading_status, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]],prompt:"選択して下さい", class: "parent_category", name: "parent_box"
         .sell-main_delivery_body
           .sell-main_delivery_body_Family
             .sell-main_delivery_body_Family_label 配送元の地域
             .sell-main_delivery_body_Family_span 必須
-          = f.select :postage_burden, [["北海道",0],["青森県",1]], prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :trading_status, [["北海道",0],["青森県",1]], prompt:"選択して下さい", class: "parent_category", name: "parent_box"
           .sell-main_delivery_body_Family
             .sell-main_delivery_body_Family_label 配送までの日数
             .sell-main_delivery_body_Family_span 必須
-          = f.collection_select :products_id, @products.all, :id, :name, prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.collection_select :delivery_days, @products.all, :id, :name, prompt:"選択して下さい", class: "parent_category", name: "parent_box"
       .sell-main_exhibition
         .sell-main_exhibition_title 価格（¥300〜9,999,999)
         .sell-main_delivery_body
