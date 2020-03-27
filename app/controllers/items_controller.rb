@@ -10,5 +10,19 @@ class ItemsController < ApplicationController
     @item = Item.find_by(id: params[:id])
     @categorie = Categorie.find_by(id: @item.categorie_id)
   end
+  
+  def create
+    @item = Item.new(item_params)
+    if @item.save
+      # redirect_to root_path
+    else
+      redirect_to new_item_path
+    end
+  end
+
+  def item_params
+    params.require(:item)
+            .permit( :name, :text, :condition, :price, :trading_status, :category_id)
+  end
 
 end
