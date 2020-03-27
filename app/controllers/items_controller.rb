@@ -8,11 +8,12 @@ class ItemsController < ApplicationController
   
   def show
     @item = Item.find_by(id: params[:id])
-    @categorie = Categorie.find_by(id: @item.categorie_id)
+    @categorie = Categorie.find_by(id: @item.category_id)
   end
   
   def create
     @item = Item.new(item_params)
+    binding.pry
     if @item.save
       # redirect_to root_path
     else
