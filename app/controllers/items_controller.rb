@@ -10,6 +10,10 @@ class ItemsController < ApplicationController
     @item = Item.find_by(id: params[:id])
     @categorie = Categorie.find_by(id: @item.category_id)
   end
+
+  def buy
+    
+  end
   
   def create
     @item = Item.new(item_params)
