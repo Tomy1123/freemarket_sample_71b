@@ -7,7 +7,8 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :price, null: false
       t.integer :trading_status, null: false
       t.datetime :completed_at
-
+      
+      
       t.timestamps
     end
   end
