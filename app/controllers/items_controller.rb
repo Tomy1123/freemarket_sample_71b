@@ -11,6 +11,10 @@ class ItemsController < ApplicationController
     @categorie = @item.name
     # @parentcategory=@categorie.parent
   end
+
+  def buy
+    
+  end
   
   def create
     @item = Item.new(item_params)
