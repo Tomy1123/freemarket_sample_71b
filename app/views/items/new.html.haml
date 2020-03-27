@@ -1,7 +1,7 @@
 .sell-container
   = render 'sell/sell_header'
   .sell-main
-    = form_with class:'sell-main__form' do |f|
+    = form_with model: @item,local: true,html: {class:'sell-main__form'} do |f|
       .sell-main_img
         .sell-main_img_body
           .sell-main_img_Family
@@ -83,7 +83,7 @@
         .profitFee.l-right -
       .sell-main_delivery_body_Family_btn
         .sell-main_delivery_body_Family_btn_a
-          =link_to "出品する", "#", class: "a"
+          = f.submit "出品する",id: "btn", class: "a"
         .sell-main_delivery_body_Family_btn_b
           =link_to "下書きに保存", "#", class: "a"
         .sell-main_delivery_body_Family_btn_c
