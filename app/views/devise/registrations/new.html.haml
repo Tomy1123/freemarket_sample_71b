@@ -1,1 +1,26 @@
-.main
+.input-main
+  .input-header
+    = link_to image_tag("logo.png", :size => "185x50")
+  .input-content
+    .input-content-top
+      会員情報入力
+    .input-content-main
+      = form_with model: @user, url: "#" , class: 'new_user', local: true do |f|
+        .contbox
+          
+          .contlist
+            .form-group
+              = f.label :nickname
+            
+            .form-group 名前
+            .form-group カタカナ
+            .form-group 誕生日
+            .form-group パスワード
+            .form-group メールアドレス
+            .form-group 郵便番号
+            .form-group 都道府県
+            .form-group 市町村
+            .form-group 番地
+            .form-group マンション
+  .inputfooter
+    = render 'items/registration-footer'
