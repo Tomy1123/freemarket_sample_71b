@@ -1,0 +1,136 @@
+.login-container{
+  box-sizing: border-box;
+  background-color: #eee;
+  .login-header{
+    margin: 40px 0 0;
+    height: 130px;
+    width: 100%;
+    text-align: center;
+    background-color: #eee;
+    .login-main{
+      .login-panel{
+        width: 456px;
+        margin: 0 auto;
+        background: #fff;
+        .login-no-accoun{
+          padding: 40px 64px;
+          .p{
+            text-align: center;
+          }
+          .a{
+            margin: 8px 0 0;
+            border: 1px solid #0099e8;
+            background: #0099e8;
+            color: #fff;
+            line-height: 40px;
+          }
+        }
+        .login-inner{
+          padding: 32px 64px;
+          border-top: 1px solid #eee;
+          .login-facebook{
+            background: #385185;
+            color: #fff;
+            display: flex;
+            .login-facebook_icon{
+              background-color: white;
+            }
+            .login-facebook_text{
+              color: white;
+            }
+          }
+          .login-google{
+            margin: 16px 0 0;
+            background: #fff;
+            border: #979797 solid 1px;
+            display: flex;
+            .login-google_icon{
+              
+            }
+            .login-google_text{
+              color: #333;
+            }
+          }
+          .login-field1{
+            padding: 24px 64px 32px;
+            .login_email{
+              width: 100%;
+            }
+          }
+          .login_field2{
+            margin: 24px 0 0;
+            .login_password{
+              width: 100%;
+            }
+            .login_field3{
+            }
+          }
+          .login_actions{
+            margin: 24px 0 0;
+            .login_btn{
+              width: 100%;
+              line-height: 48px;
+              background: #ea352d;
+              border: 1px solid #ea352d;
+              color: #fff;
+            }
+          }
+        }
+        .login_forget{
+          display: block;
+          margin: 40px 0 0;
+          color: #0099e8;
+        }
+      }
+    }
+  }
+  .login-footer{
+    width: 456px;
+    height: 220px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+    .login-footer_box{
+      display: flex;
+      .login-footer_box_a{
+        margin: 0;
+        padding: 0;
+        .a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 12px;
+          line-height: 32px;
+        }
+      }
+      .login-footer_box_b{
+        margin: 0;
+        padding: 0;
+        .a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 12px;
+          line-height: 32px;
+        }
+      }
+      .login-footer_box_c{
+        margin: 0;
+        padding: 0;
+        .a{
+          color: #fff;
+          text-decoration: none;
+          font-size: 12px;
+          line-height: 32px;
+        }
+      }
+    }
+    .login-footer_img{
+      max-width: 160px;
+    width: 100%;
+    margin: 0 auto;
+    vertical-align: bottom;
+    }
+    .p{
+      font-size: 14px;
+    }
+  }
+}
