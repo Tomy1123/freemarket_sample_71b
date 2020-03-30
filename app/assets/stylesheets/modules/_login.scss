@@ -11,7 +11,6 @@
   height: 409px;
   background-color: #eee;
   .sign-up-main__container{
-    max-width: none;
     width: 456px;
     height: 100%;
     margin: 0 auto;
@@ -25,43 +24,18 @@
       .form-group{
         margin-bottom: 40px;
         .teams{
-          .i-n-team{
-
-          }
           .hissu{
             color: red;
           }
-        }
-        .form-content{
-
         }
       }
       .form-group{
         .teams{
-          .i-n-team{
-
-          }
           .hissu{
             color: red;
           }
         }
-        .form-content{
-        }
-        .form-group__content{
-          .form-group__content__box{
-            .form-content__radio{
-
-            }
-            .form-content__remember{
-
-            }
-          }
-        }
-      }
-      .form-group.submit-content{
-        .form-submit{
-          
-        }
+      
       }
     }
   }
@@ -71,7 +45,7 @@
   flex-direction: column;
   background-color: #eee;
   .login_footer_contents{
-    margin: 0 0 20px;
+    margin-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
     .login_footer_contents_content_box_b{
