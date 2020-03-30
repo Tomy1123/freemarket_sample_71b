@@ -1,5 +1,44 @@
-.main{
-  background-color: red;
-  width: 100px;
-  height: 100px;
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.input-header{
+  text-align: center;
+  height: 130px;
+  background-color: #eee;
+  line-height: 130px;
+}
+
+
+.input-content{
+  height: 1000px;
+  background-color: #eee;
+  .input-content-top{
+    text-align: center;
+  }
+  .contbox{
+    width: 700px;
+    background-color: white;
+    margin: 0 auto;
+    padding-top: 20px;
+    .contlist{
+      width: 400px;
+      height: 750px;
+      margin: 0 auto;
+      .form-group{
+        height: 50px;
+        margin: 20px 0px 40px;
+      }
+    }
+  }
+}
+
+.inputfooter{
+  background-color: #eee;
+  text-align: center;
 }
