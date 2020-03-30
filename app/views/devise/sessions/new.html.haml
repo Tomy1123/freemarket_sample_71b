@@ -1,17 +1,42 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.login-container
+  .login-header
+    = link_to image_tag("logo.png", :size => "185x50")
+    .login-main
+      .login-panel
+        .login-no-accoun
+          %p.p アカウントをお持ちでない方はこちら
+          =link_to "新規会員登録","#",class: "a"
+        .login-inner
+          =link_to "#", class: "login-facebook"
+            = icon('fab', "fa-facebook-square", class: "login-facebook_icon")
+            .login-facebook_text Facebookでログイン
+          =link_to "#", class: "login-google"
+            = icon('fas', "fa-google", class: "login-google_icon")
+            .login-google_text Googleでログイン
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .login-field1
+            = f.label :email
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "メールアドレス", class: "login_email"
+          .login_field2
+            = f.label :password
+            %br/
+            = f.password_field :password, autocomplete: "パスワード", class: "login_password"
+          - if devise_mapping.rememberable?
+            .login_field3
+              = f.check_box :remember_me
+              = f.label :remember_me
+          .login_actions
+            = f.submit "ログイン", class: "login_btn"
+        = render "devise/shared/links"
+        .login_forget パスワードをお忘れの方
+  .login-footer
+    .login-footer_box
+      .login-footer_box_a
+        =link_to "プライバシーポリシー","#",class: "a"   
+      .login-footer_box_b
+        =link_to "FURIMA利用規約","#",class: "a"
+      .login-footer_box_c
+        =link_to "特定商取引に関する表記","#",class: "a"
+    = link_to image_tag("logo.png",:size => "90x35"),class:"img"
+    %p.p＠FURIMA
