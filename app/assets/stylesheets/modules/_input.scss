@@ -15,28 +15,15 @@
 
 }
 
-
 .input-content{
-  height: 1200px;
   background-color: #eee;
-  .contbox{
-    width: 700px;
-    height: 1000px;
+  .input-content-top{
+    text-align: center;
+  }
+  .input-content-main{
     background-color: white;
-    margin: 0 auto;
-    h2{
-      height: 60px;
-      padding: 16px;
-      font-size: 18px;
+    .contbox{
       text-align: center;
-    }
-    .contlist{
-      width: 400px;
-      height: 750px;
-      margin: 0 auto;
-      .form-group{
-        height: 50px;
-      }
     }
   }
 }
@@ -44,4 +31,5 @@
 .inputfooter{
   background-color: #eee;
   text-align: center;
+  height: 130px;
 }
