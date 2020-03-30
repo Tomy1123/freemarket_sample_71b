@@ -1,92 +1,116 @@
-.main{
-  height: 100vh;
-  background-color: #eee;
+.main-buy{
+  height: 100%;
+  width: 100%;
   .home-main_header{
-    position: left; 
-    position: relative;
     height: 130px;
     width: 100%;
     text-align: center;
     background-color: #eee;
-    .home-main_header_headerInner_mainheader_icon{
+    }
+    img{
+      margin-top: 40px;
+    }       
+  }
+    
+  　.home-main_header_headerInner_mainheader_icon{
+    text-align: center
+    
+    
+    {
       text-align: center;
-      line-height: 130px;
     }
+    
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.home-main_footer_logo{
-  text-align: center;
-  background-color: #eee;
-  padding: 40px 0px;
-  .home-main_footer_content_box_a {
-
-  }
-  .home-main_footer_content_box_b{
-
-  }
-  .home-main_footer_content_box_c {
-  }
-  }
-p{
+  .single-head.buy-head{
     text-align: center;
-    background-color: #eee;
+    font-size: 22px;
+    padding: 32px;
     }
-  }
+    .single-container{
+      text-align: center;
+    }
+     .single-container_header{
+      text-align: center;
+    } 
 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .home-main_footer{
+   padding: 220px;
+   background-color: #eeeeee;
+}
+     .home-main_footer_logo{
+        text-align: center;
+        background-color: #eee;
+        padding: 40px 0px;
+        .home-main_footer_content_box_a {
+          text-align: center;
+          font-size: 12px;
+
+        }
+        .home-main_footer_content_box_b{
+          text-align: center;
+          font-size: 12px;
+
+        }
+        .home-main_footer_content_box_c {
+          text-align: center;
+          font-size: 12px;
+        }
+        }
+      p{
+          text-align: center;
+          background-color: #eee;
+          }
+        
