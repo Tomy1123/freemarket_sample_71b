@@ -1,11 +1,13 @@
 .main{
   height: 100vh;
   background-color: #eee;
+}
   .home-main_header{
     position: left; 
     position: relative;
     height: 130px;
     width: 100%;
+    
     text-align: center;
     background-color: #eee;
     .home-main_header_headerInner_mainheader_icon{
@@ -13,7 +15,19 @@
       line-height: 130px;
     }
   }
+  .header.head {
+    height: 640px;
+    width: 700px;
+    background-color: white;
+    margin: 0 auto;
 
+  }
+
+  .single-head.buy-head{
+    height: 650px;
+    font-size: 22px;
+    text-align: center;
+  }
 
 
 
@@ -75,18 +89,23 @@
   text-align: center;
   background-color: #eee;
   padding: 40px 0px;
+  height: 350px;
+  line-height: 40px;
+  padding: 40px 0;
+  
+}
   .home-main_footer_content_box_a {
+    font-size: 12px;
 
   }
   .home-main_footer_content_box_b{
-
+    font-size: 12px;
   }
   .home-main_footer_content_box_c {
+    font-size: 12px;
   }
-  }
+  
 p{
     text-align: center;
-    background-color: #eee;
-    }
+    // background-color: #eee;
   }
-
