@@ -164,9 +164,7 @@
                 = f.label :password_confirmation
                 %br/
                 = f.password_field :password_confirmation, autocomplete: "off"
-              .form-group
-                %input.button{:title => "Sign in", :type => "submit", :value => "Sign in"}/
-              .form-group
-              .form-group
+              .form-btn
+                %input.button{:title => "Sign in", :type => "submit", :value => "登録"}/
   .inputfooter
     = render 'items/registration-footer'
