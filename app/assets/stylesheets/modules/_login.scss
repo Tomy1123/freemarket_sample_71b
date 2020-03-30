@@ -1,136 +1,98 @@
-.login-container{
-  box-sizing: border-box;
-  background-color: #eee;
+.login-main{
+  height: 100%;
+  width: 100%;
   .login-header{
-    margin: 40px 0 0;
-    height: 130px;
-    width: 100%;
     text-align: center;
+    height: 130px;
     background-color: #eee;
-    .login-main{
-      .login-panel{
-        width: 456px;
-        margin: 0 auto;
-        background: #fff;
-        .login-no-accoun{
-          padding: 40px 64px;
-          .p{
-            text-align: center;
-          }
-          .a{
-            margin: 8px 0 0;
-            border: 1px solid #0099e8;
-            background: #0099e8;
-            color: #fff;
-            line-height: 40px;
-          }
-        }
-        .login-inner{
-          padding: 32px 64px;
-          border-top: 1px solid #eee;
-          .login-facebook{
-            background: #385185;
-            color: #fff;
-            display: flex;
-            .login-facebook_icon{
-              background-color: white;
-            }
-            .login-facebook_text{
-              color: white;
-            }
-          }
-          .login-google{
-            margin: 16px 0 0;
-            background: #fff;
-            border: #979797 solid 1px;
-            display: flex;
-            .login-google_icon{
-              
-            }
-            .login-google_text{
-              color: #333;
-            }
-          }
-          .login-field1{
-            padding: 24px 64px 32px;
-            .login_email{
-              width: 100%;
-            }
-          }
-          .login_field2{
-            margin: 24px 0 0;
-            .login_password{
-              width: 100%;
-            }
-            .login_field3{
-            }
-          }
-          .login_actions{
-            margin: 24px 0 0;
-            .login_btn{
-              width: 100%;
-              line-height: 48px;
-              background: #ea352d;
-              border: 1px solid #ea352d;
-              color: #fff;
-            }
+  }
+}
+.sign-up-main{
+  height: 409px;
+  background-color: #eee;
+  .sign-up-main__container{
+    width: 456px;
+    height: 100%;
+    margin: 0 auto;
+    background: #fff;
+    .sign-up-main__container__title{
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .sign-up-main__container__forms{
+      text-align: center;
+      .form-group{
+        margin-bottom: 40px;
+        .teams{
+          .hissu{
+            color: red;
           }
         }
-        .login_forget{
-          display: block;
-          margin: 40px 0 0;
-          color: #0099e8;
+      }
+      .form-group{
+        .teams{
+          .hissu{
+            color: red;
+          }
         }
+      
       }
     }
   }
-  .login-footer{
-    width: 456px;
-    height: 220px;
-    margin: 0 auto;
-    padding: 40px 0;
-    text-align: center;
-    .login-footer_box{
-      display: flex;
-      .login-footer_box_a{
-        margin: 0;
-        padding: 0;
-        .a{
-          color: #fff;
-          text-decoration: none;
-          font-size: 12px;
-          line-height: 32px;
-        }
-      }
-      .login-footer_box_b{
-        margin: 0;
-        padding: 0;
-        .a{
-          color: #fff;
-          text-decoration: none;
-          font-size: 12px;
-          line-height: 32px;
-        }
-      }
-      .login-footer_box_c{
-        margin: 0;
-        padding: 0;
-        .a{
-          color: #fff;
-          text-decoration: none;
-          font-size: 12px;
-          line-height: 32px;
-        }
+}
+.login_footer{
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  .login_footer_contents{
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    .login_footer_contents_content_box_b{
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      .a{
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 32px;
       }
     }
-    .login-footer_img{
-      max-width: 160px;
+    .login_footer_contents_content_box_c{
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      .a{
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 32px;
+    }
+    }
+    .home-main_footer_contents_content_box_d{
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      .a{
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 32px;
+      }
+    }
+  }
+  .login_footer_logo{
+    max-width: 160px;
     width: 100%;
     margin: 0 auto;
-    vertical-align: bottom;
+    .img{
+      width: 100%;
+      vertical-align: bottom;
     }
-    .p{
-      font-size: 14px;
-    }
+  }
+  .p{
+    text-align: center;
+    font-size: 14px;
   }
 }

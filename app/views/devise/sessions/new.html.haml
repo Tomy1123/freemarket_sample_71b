@@ -1,42 +1,41 @@
-.login-container
+.login-main
   .login-header
     = link_to image_tag("logo.png", :size => "185x50")
-    .login-main
-      .login-panel
-        .login-no-accoun
-          %p.p アカウントをお持ちでない方はこちら
-          =link_to "新規会員登録","#",class: "a"
-        .login-inner
-          =link_to "#", class: "login-facebook"
-            = icon('fab', "fa-facebook-square", class: "login-facebook_icon")
-            .login-facebook_text Facebookでログイン
-          =link_to "#", class: "login-google"
-            = icon('fas', "fa-google", class: "login-google_icon")
-            .login-google_text Googleでログイン
-        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          .login-field1
-            = f.label :email
-            %br/
-            = f.email_field :email, autofocus: true, autocomplete: "メールアドレス", class: "login_email"
-          .login_field2
-            = f.label :password
-            %br/
-            = f.password_field :password, autocomplete: "パスワード", class: "login_password"
-          - if devise_mapping.rememberable?
-            .login_field3
-              = f.check_box :remember_me
-              = f.label :remember_me
-          .login_actions
-            = f.submit "ログイン", class: "login_btn"
-        = render "devise/shared/links"
-        .login_forget パスワードをお忘れの方
-  .login-footer
-    .login-footer_box
-      .login-footer_box_a
-        =link_to "プライバシーポリシー","#",class: "a"   
-      .login-footer_box_b
-        =link_to "FURIMA利用規約","#",class: "a"
-      .login-footer_box_c
-        =link_to "特定商取引に関する表記","#",class: "a"
-    = link_to image_tag("logo.png",:size => "90x35"),class:"img"
-    %p.p＠FURIMA
+.sign-up-main
+  .sign-up-main__container
+    %h2.sign-up-main__container__title
+      ログイン
+    .sign-up-main__container__forms
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .form-group
+          .teams
+            %h3.i-n-team
+              メールアドレス
+            %p.hissu
+              必須
+          = f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-content'
+        .form-group
+          .teams
+            %h3.i-n-team
+              パスワード
+            %p.hissu
+              必須
+          = f.password_field :password, autocomplete: "current-password", class: 'form-content'
+        - if devise_mapping.rememberable?
+          .form-group__content
+            .form-group__content__box
+              = f.check_box :remember_me, class: 'form-content__radio'
+              = f.label :remember_me, 'ログイン情報を記憶', class: 'form-content__remember'
+        .form-group.submit-content
+          = f.submit "ログイン", class: 'form-submit'
+.login_footer
+  %ul.login_footer_contents
+    %li.login_footer_contents_content_box_b
+      =link_to "プライバシーポリシー","#",class: "a"
+    %li.login_footer_contents_content_box_c
+      =link_to "FURIMA利用規約","#",class: "a"
+    %li.home-main_footer_contents_content_box_d
+      =link_to "ポイントに関する特約","#",class: "a"
+  .login_footer_logo
+    = link_to image_tag("logo-white.png",:size => "160x46"),class:"img"
+  %p.p＠FURIMA
