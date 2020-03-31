@@ -1,116 +1,148 @@
-.main-buy{
-  height: 100%;
-  width: 100%;
+.main{
   .home-main_header{
     height: 130px;
     width: 100%;
     text-align: center;
     background-color: #eee;
-    }
-    img{
-      margin-top: 40px;
-    }       
-  }
-    
+    line-height: 150px; 
   　.home-main_header_headerInner_mainheader_icon{
     text-align: center
-    
-    
-    {
-      text-align: center;
     }
-    
   }
-  .single-head.buy-head{
-    text-align: center;
-    font-size: 22px;
-    padding: 32px;
-    }
-    .single-container{
+  .buy-head{
+    height: 800px;
+    width: 100%;
+    background-color: #eee;
+    .container{
       text-align: center;
+      font-size: 22px;
+      padding: 32px;
+      margin: 0 auto;
+      background-color: white;
+      height: 800px;
+      width: 700px;
+      .titel{
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+      .buy-item{
+        height: 150px;
+        padding: 32px 16px;
+        border-bottom: 1px solid #eee;
+        .buy-box{
+          margin: 0 auto;
+          display: flex;
+          .imagbox{
+            height: 60px;
+            width: 60px;
+            background-color: yellow;
+          }
+          .steit{
+            margin-left: 20px;
+          }
+        }
+      }
+      .buy-item2{
+        max-width: 343px;
+        margin: 0 auto;
+        .buy_form-a{
+          .buy_table{
+            margin-top: 30px;
+            display: flex;
+            border-bottom: solid 1px #eee;
+            .buy_child{
+              text-align: left;
+            }
+            .buy_cell{
+              margin-left: 180px;
+            }
+          }
+        }
+        .buy_form-b{
+          .buy_point{
+            .buy_checkbox{
+            }
+          }
+        }
+        .buy_form-c{
+          padding: 32px 0;
+          text-align: left;
+          border-bottom: solid 1px #eee;
+          .buy_x{
+            font-size: 14px;
+          }
+          a{
+            text-decoration: none;
+            font-size: 12px;
+          }
+        }
+        .buy_form-d{
+          padding: 32px 0;
+          text-align: left;
+          border-bottom: solid 1px #eee;
+          .buy_x{
+            font-size: 14px;
+          }
+          a{
+            text-decoration: none;
+            font-size: 12px;
+          }
+        }
+        .buy_form-e{
+          width: 330px;
+          height: 50px;
+          text-align: center;
+          .buy_btn{
+            background-color:#EA352D;
+            width: 330px;
+            height: 50px;
+            a{
+              text-decoration: none;
+              color: white;
+              font-size: 17px;
+              position: relative;
+              top: 9px;
+            }
+          }
+        }
+      }
     }
-     .single-container_header{
-      text-align: center;
-    } 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
   .home-main_footer{
    padding: 220px;
    background-color: #eeeeee;
 }
-     .home-main_footer_logo{
+     .home-main_footer_logo2{
         text-align: center;
         background-color: #eee;
         padding: 40px 0px;
-        .home-main_footer_content_box_a {
+        color: lightsteelblue;
+        .home-main_footer_content_box_d {
+          
           text-align: center;
           font-size: 12px;
-
+          a{
+            color:#333;
+          }
         }
-        .home-main_footer_content_box_b{
+        .home-main_footer_content_box_e{
           text-align: center;
           font-size: 12px;
-
+          a{
+            color: #333;
+          }
         }
-        .home-main_footer_content_box_c {
+        .home-main_footer_content_box_f {
           text-align: center;
           font-size: 12px;
+          a{
+           color: #333
+          }
         }
         }
       p{
-          text-align: center;
-          background-color: #eee;
+        font-size: 14px;
           }
-        
+        }
