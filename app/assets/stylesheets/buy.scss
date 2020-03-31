@@ -95,73 +95,25 @@
           }
         }
         .buy_form-e{
-          width: 343px;
+          width: 330px;
           height: 50px;
           text-align: center;
           .buy_btn{
-            background-color: gray;
+            background-color:#EA352D;
+            width: 330px;
+            height: 50px;
             a{
               text-decoration: none;
               color: white;
+              font-size: 17px;
+              position: relative;
+              top: 9px;
             }
           }
         }
       }
     }
   }
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .home-main_footer{
    padding: 220px;
    background-color: #eeeeee;
@@ -170,19 +122,28 @@
         text-align: center;
         background-color: #eee;
         padding: 40px 0px;
+        color: lightsteelblue;
         .home-main_footer_content_box_d {
+          
           text-align: center;
           font-size: 12px;
-          
+          a{
+            color:#333;
+          }
         }
         .home-main_footer_content_box_e{
           text-align: center;
           font-size: 12px;
-
+          a{
+            color: #333;
+          }
         }
         .home-main_footer_content_box_f {
           text-align: center;
           font-size: 12px;
+          a{
+           color: #333
+          }
         }
         }
       p{
