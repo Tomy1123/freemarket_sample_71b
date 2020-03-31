@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_for :profiles
   get 'items/new'
   root 'sell#index'
   resources :users, only: [:show,:new]
