@@ -1,7 +1,7 @@
 .sell-container
   = render 'sell/sell_header'
   .sell-main
-    = form_with model: @item,local: true,html: {class:'sell-main__form'} do |f|
+    = form_with model: @item, local: true, html: {class:'sell-main__form'}, url: {action: "create"} do |f|
       .sell-main_img
         .sell-main_img_body
           .sell-main_img_Family
@@ -12,7 +12,7 @@
             .sell-main_img_Family_img-upload_items
               %icon_camera.png
               = f.fields_for :images do |i|
-                = f.label :image, class: 'form__mask__image' do
+                = f.label:image, class: 'form__mask__image' do
                   = icon('fas', 'fas fa-camera', class: 'icon')
                   = f.file_field :image, class: 'hidden'
             .sell-main_img_Family_img-upload_hsmaqh
