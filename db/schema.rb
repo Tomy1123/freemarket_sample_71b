@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 2020_03_31_060420) do
     t.index ["ancestry"], name: "index_categories_on_ancestry"
   end
 
+  create_table "item_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "item_id"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "text", null: false
@@ -54,6 +61,11 @@ ActiveRecord::Schema.define(version: 2020_03_31_060420) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "postcode", null: false
+    t.string "prefecture", null: false
+    t.string "city", null: false
+    t.string "adress1", null: false
+    t.string "adress2", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 

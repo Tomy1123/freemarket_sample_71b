@@ -5,7 +5,7 @@
     .input-content-top
       会員情報入力
     .input-content-main
-      = form_with model: @user, url: "#" , class: 'new_user', local: true do |f|
+      = form_with model: @user, url: user_registration_path, class: 'new_user', local: true do |f|
         .contbox
           .contlist
             .form-group
@@ -19,28 +19,22 @@
                 %span.label.label-danger 必須
               .col-sm-10 
                 = f.text_field :first_name, placeholder: '例）目留',class: 'format-input-half',required: true
-                = f.text_field :last_name, placeholder: '例) 仮子',class: 'format-input-half',required: true
+                = f.text_field :family_name, placeholder: '例) 仮子',class: 'format-input-half',required: true
             .form-group
               %label.col-sm-2.control-label
                 名前 (カナ)
                 %span.label.label-danger 必須
               .col-sm-10 
                 = f.text_field :first_name_kana, placeholder: '例）メル',class: 'format-input-half',required: true
-                = f.text_field :last_name_kana, placeholder: '例) カリコ',class: 'format-input-half',required: true
+                = f.text_field :family_name_kana, placeholder: '例) カリコ',class: 'format-input-half',required: true
             .form-group
               = f.label :email 
               %br/ 
               = f.email_field :email
             .form-group
-              %label.col-sm-2.control-label
-                電話番号
-                %span.label.label-danger
-              .col-sm-10 
-                %input.form-control{autocomplete: "tel", name: "tel", placeholder: "電話番号", required: "", type: "tel"}/
-            .form-group
               %label.col-sm-2.control-label 生年月日
               .col-sm-10 
-                %select{autocomplete: "bday-year", name: "bday-year"}
+                %select{autocomplete: "birth_year", name: "birth_year"}
                   %option{selected: "selected"} ----
                   %option{value: "2010"} 2010
                   %option{value: "2009"} 2009
@@ -104,7 +98,7 @@
                   %option{value: "1951"} 1951
                   %option{value: "1950"} 1950
                 %label 年
-                %select{autocomplete: "bday-month", name: "bday-month"}
+                %select{autocomplete: "birth_month", name: "birth_month"}
                   %option{selected: "selected"} --
                   %option{value: "1"} 1
                   %option{value: "2"} 2
@@ -119,7 +113,7 @@
                   %option{value: "11"} 11
                   %option{value: "12"} 12
                 %label 月
-                %select{autocomplete: "bday-day", name: "bday-day"}
+                %select{autocomplete: "birth_day", name: "birth_day"}
                   %option{selected: "selected"} --
                   %option{value: "1"} 1
                   %option{value: "2"} 2

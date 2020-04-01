@@ -13,16 +13,35 @@ class ItemsController < ApplicationController
   end
 
   def buy
-    
   end
   
   def create
     @item = Item.new(item_params)
+    @item.save
     if @item.save
-      # redirect_to root_path
+      redirect_to controller: :items, action: :index
     else
-      redirect_to new_item_path
+      render "new"
     end
+  end
+
+  def show
+    @item=Item.find(params[:id])
+    @category=@item.category
+    @children=@category.parent
+    @parentcategory=@category.parent
+    @images = @item.item_images
+    @image = @images.first
+    # @comment = Comment.new
+    # @comments = @product.comments.includes(:user)
+  end
+
+  private
+
+
+  def set_items
+    @item = Item.find(params[:id])
+
   end
 
   def item_params
