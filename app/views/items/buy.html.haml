@@ -1,85 +1,39 @@
-.main-buy
+.main
   .home-main_header
     .home-main_header_headerInner_mainheader_icon
       = link_to image_tag("logo.png", :size => "185x50")
-  .single-head.buy-head
-    .single-container
-      .single-container_header 購入内容の確認
-      .single-container_inner
-    .buy-content.buy-item
-      = link_to image_tag("logo.png",:size => "80x60")
-        %li フリマのロゴ
-          
-
-      　　　
-    .section.buy-content.buy-item
-      .section.conteiner  支払い金額　　　￥１,０００
-      .check_box-default.buy-use-point
-      %h1 ポイントを使用（所持ポイント０P）
-      %h2 配送先
-      %h3 登録してください
-      %button.btn-default.btn-main
-      
-        
-
-
-  
-  
-  
-  .home-main_footer
-    -# .home-main_footer_logo1
-    -#   = link_to image_tag(“logo.png”,:size => “90x35”),class:“img”
-    -# .home-main_footer_content_box_a
-    -#   =link_to “プライバシーポリシー“,”#“,class: “a”
-    -# .home-main_footer_content_box_b
-    -#   =link_to “FURIMA利用規約“,”#“,class: “b”
-    -# .home-main_footer_content_box_c
-    -#   =link_to “特定商取引に関する表記“,”#“,class: “c”
-  
- 
-
-   
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
+  .buy-head
+    .container
+      .titel 購入内容の確認
+      .buy-item
+        .buy-box
+          .imagbox
+          .steit  ただの黄色です
+      .buy-item2
+        .buy_form-a
+          .buy_table
+            .buy_child 支払い金額
+            .buy_cell ¥
+        .buy_form-b
+          .buy_point
+            .buy_checkbox
+        .buy_form-c
+          %h3.buy_x
+            支払い方法
+          =link_to "登録してください", class: "buy_z"
+        .buy_form-d
+          %h3.buy_x
+            配送方法
+          =link_to "登録してください", class: "buy_z"
+        .buy_form-e
+          .buy_btn
+            = link_to "購入する", class: "buy_submit"
+  .home-main_footer_logo2
+    = link_to image_tag("logo.png",:size => "90x35"),class:"img"
+    .home-main_footer_content_box_d
+      =link_to "プライバシーポリシー","#",class: "a"   
+    .home-main_footer_content_box_e
+      =link_to "FURIMA利用規約","#",class: "a"
+    .home-main_footer_content_box_f
+      =link_to "特定商取引に関する表記","#",class: "a"
+    %p.p＠FURIMA 
