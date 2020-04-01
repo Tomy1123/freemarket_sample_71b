@@ -2,24 +2,28 @@
   = render 'sell/sell_header'
   .sell-main
     = form_with model: @item, local: true, html: {class:'sell-main__form'}, url: {action: "create"} do |f|
-      .sell-main_img
-        .sell-main_img_body
-          .sell-main_img_Family
-            .sell-main_img_Family_label 出品情報
-            .sell-main_img_Family_span 必須
-          .sell-main_img_Family_style-body 最大4枚までアップロードできます
-          .sell-main_img_Family_img-upload
-            .sell-main_img_Family_img-upload_items
-              %icon_camera.png
-              = f.fields_for :images do |i|
-                = f.label:image, class: 'form__mask__image' do
-                  = icon('fas', 'fas fa-camera', class: 'icon')
-                  = f.file_field :image, class: 'hidden'
-            .sell-main_img_Family_img-upload_hsmaqh
-            .sell-main_img_Family_img-upload_hsmaqh_btn
-              .sell-main_img_Family_img-upload_hsmaqh_btn_icon
-            .sell-main_img_Family_img-upload_hsmaqh_btn_text 
-          .sell-main_img_body_formerror
+      .main
+        %section.main__block
+          %h2.sell__block__head
+            商品の情報を入力
+          .sell__block__form
+            .sell__block__form__upload
+              %h3.sell__block__form__upload__head
+                出品画像
+                %span.require 必須
+              %p 最大5枚までアップロードできます
+              .post__drop__box__container
+                .prev-content
+                .label-content
+                  %label{for: "item_images_attributes_0_image", class: "label-box", id: "label-box--0"}
+                    %pre.label-box__text-visible クリックしてファイルをアップロード
+                  .hidden-content
+                    = f.fields_for :images do |i|
+                      = i.file_field :image, class: "hidden-field",id:"item_images_attributes_0_image"
+                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
+                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
+                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
+                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][4][image]", id: "item_images_attributes_4_image" }
       .sell-main_text
         .sell-main_text_body
           .sell-main_text_body_Family

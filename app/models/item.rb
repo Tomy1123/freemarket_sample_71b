@@ -14,4 +14,5 @@ class Item < ApplicationRecord
   belongs_to :size
   belongs_to :deliverycharge
   belongs_to :deliveryspend
+
 end
