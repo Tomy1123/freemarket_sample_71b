@@ -84,12 +84,29 @@
         %p.home-main_topKeyFeatures_items_item_img_detail
           お支払いは、クレジットカードだけでなく、、ポイントや売上金など多彩な方法があります。
   .home-main_pickupContainer
-    %h2.home-main_pickupContainer_head
-      ピックアップカテゴリー
-    .home-main_pickupContainer_new
-      .home-main_pickupContainer_new_productHead
-        =link_to "新規投稿商品","#",class: "a"
-      .home-main_pickupContainer_new_productLists
+    .home-main_pickupContainer_content
+      %h2.home-main_pickupContainer_head
+        ピックアップカテゴリー
+      .index__main__pickupContainer__headbottom
+        新規投稿商品
+    .index__main__pickupContainer__lists
+      .index__main__pickupContainer__lists__list__itemlink
+        - @items.last(3).reverse.each do |item|
+          .index__main__pickupContainer__lists__list__itemlink__items
+            = link_to item_path(item.id), class: "index__header__inner__nav__listsLeft__left-btn" do
+              .index__main__pickupContainer__lists__list__itemlink__items__images
+                - item.item_images.first(1).each do |image|
+                  =image_tag image.image_url.to_s,class: "index__main__item__image"
+              .index__main__pickupContainer__lists__list__itemlink_a
+                .index__main__pickupContainer__lists__list__itemlink__name
+                  商品名
+                  #do.index__main__pickupContainer__lists__list__itemlink__name__name-name
+                    = item.name
+                .index__main__pickupContainer__lists__list__itemlink__price
+                  商品の価格:
+                  .index__main__pickupContainer__lists__list__itemlink__price__price-price
+                    = item.price
+                    %p.index__main__pickupContainer__lists__list__itemlink__soldout
   .home-main_pickupContainer
     %h2.home-main_pickupContainer_head
       ピックアップブランド
