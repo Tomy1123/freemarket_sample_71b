@@ -2,7 +2,6 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.item_images.build
-    # 5.file_field { @item.item_images.build }
     @parent = Categorie.where(id: 1..13)
   end
   
@@ -57,6 +56,4 @@ class ItemsController < ApplicationController
             .permit( :name, :text, :category_id, :condition, :brand, :trading_status, :price, :delivery_days,item_images_attributes: [:image_url])
   end
 
-
-    # params.require(:item_images).permit(:title, images_url_attributes: {image: []})
 end
