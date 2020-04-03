@@ -2,13 +2,12 @@
   .home-main_header_headerInner
     .home-main_header_headerInner_mainHeader
       .home-main_header_headerInner_mainHeader_icon
-        = link_to image_tag("logo.png", :size => "140x40")
+        = link_to image_tag("logo.png", size: "140x40")
       .home-main_header_headerInner_mainHeader_searchBox
         %form{ action: '/', method: 'post' }
           %input{ name: 'seach', class: 'toppage-header-top__header-search--search-form',
           placeholder: 'キーワードから探す' }
         .home-main_header_headerInner_mainHeader_search-btn
-          -# = icon('fas', 'search', alt: 'search-icon',
           = link_to image_tag("icon-search 1.png",class: 'toppage-header-top__header-search--search-btn')
     .home-main_header_headerInner_nav
       %ul.home-main_header_headerInner_nav_listsLeft
