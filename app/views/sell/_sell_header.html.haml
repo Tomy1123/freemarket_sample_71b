@@ -17,7 +17,11 @@
         %ui.home-main_header_headerInner_nav_listsLeftlistsLeft_item
           =link_to "ブランド","#",class: "a"
       %ul.home-main_header_headerInner_nav_listsRight
-        %ui.home-main_header_headerInner_nav_listsRight_item-login
-          =link_to "ログイン","users/sign_in",class: "a"
-        %ui.home-main_header_headerInner_nav_listsRight_item-new
-          =link_to "新規会員登録","/users/sign_up",class: "a"
+        - if user_signed_in?
+          %ui.home-main_header_headerInner_nav_listsRight_item-login
+            =link_to "マイページ","users/show",class: "a"
+        - else
+          %ui.home-main_header_headerInner_nav_listsRight_item-login
+            =link_to "ログイン","users/sign_in",class: "a"
+          %ui.home-main_header_headerInner_nav_listsRight_item-new
+            =link_to "新規会員登録","/users/sign_up",class: "a"

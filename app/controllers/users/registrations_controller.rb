@@ -5,9 +5,23 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    @user = User.new
+    @user.build_profile
+  end
+
+  def create
+    @user = User.new(user_params)
+    @user.save
+    redirect_to root_path
+  end
+
+
+  private
+
+  def user_params
+    params.require(:user).permit(:email, :password, :encrypted_password,:nickname, profile_attributes: [:first_name,:family_name,:first_name_kana,:family_name_kana,:birth_year,:birth_month,:birth_day,:postcode,:prefecture,:city,:adress1,:adress2])
+  end
 
   # POST /resource
   # def create

@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_023124) do
 
+ActiveRecord::Schema.define(version: 2020_04_02_023124) do
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -52,13 +52,14 @@ ActiveRecord::Schema.define(version: 2020_04_02_023124) do
   end
 
   create_table "profiles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "first_name"
-    t.string "family_name"
-    t.string "first_name_kana"
-    t.string "family_name_kana"
-    t.date "birth_year"
-    t.date "birth_month"
-    t.date "birth_day"
+    t.string "first_name", null: false
+    t.string "family_name", null: false
+    t.string "first_name_kana", null: false
+    t.string "family_name_kana", null: false
+    t.string "birth_year", null: false
+    t.string "birth_month", null: false
+    t.string "birth_day", null: false
+
     t.text "introduction"
     t.string "avatar"
     t.bigint "user_id"
