@@ -3,6 +3,9 @@
   .sell-main
     = form_with model: @item, local: true, html: {class:'sell-main__form'}, url: {action: "create"} do |f|
       .main
+        .notifications
+          - flash.each do |key, value|
+            = content_tag(:div, value, class: key)
         %section.main__block
           %h2.sell__block__head
             商品の情報を入力
@@ -18,12 +21,12 @@
                   %label{for: "item_images_attributes_0_image", class: "label-box", id: "label-box--0"}
                     %pre.label-box__text-visible クリックしてファイルをアップロード
                   .hidden-content
-                    = f.fields_for :images do |i|
-                      = i.file_field :image, class: "hidden-field",id:"item_images_attributes_0_image"
-                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
-                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
-                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
-                      %input{class:"hidden-field", type: "file", name: "item[images_attributes][4][image]", id: "item_images_attributes_4_image" }
+                    = f.fields_for :item_images do |i|
+                      = i.file_field :image_url, class: "hidden-field",id:"item_images_attributes_0_image"
+                      %input{class:"hidden-field", type: "file", name: "item[item_images_attributes][1][image_url]", id: "item_images_attributes_1_image" }
+                      %input{class:"hidden-field", type: "file", name: "item[item_images_attributes][2][image_url]", id: "item_images_attributes_2_image" }
+                      %input{class:"hidden-field", type: "file", name: "item[item_images_attributes][3][image_url]", id: "item_images_attributes_3_image" }
+                      %input{class:"hidden-field", type: "file", name: "item[item_images_attributes][4][image_url]", id: "item_images_attributes_4_image" }
       .sell-main_text
         .sell-main_text_body
           .sell-main_text_body_Family
@@ -43,7 +46,7 @@
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label カテゴリー
             .sell-main_categorie_body_Family_span 必須
-          = f.collection_select :category_id, @parent.all, :id, :name, prompt:"選択して下さい", class: "sell-main_categorie_body_select", name: "parent_box"
+          = f.collection_select :category_id, @parent, :id, :name, prompt:"選択して下さい", class: "sell-main_categorie_body_select", name: "parent_box"
         .sell-main_categorie_body
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label ブランド
@@ -53,7 +56,7 @@
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label 商品の状態
             .sell-main_categorie_body_Family_span 必須
-          = f.collection_select :condition, @product.all, :id, :name, prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :condition, [["新品、未使用",0],["未使用に近い",1],["目立った傷や汚れなし",2],["やや傷や汚れあり",3],["傷や汚れあり",4],["全体的に状態が悪い",5]], prompt:"選択して下さい", class: "parent_category", name: "parent_box"
       .sell-main_delivery
         .sell-main_delivery_title 配送について
         .sell-main_delivery_body
@@ -69,7 +72,7 @@
           .sell-main_delivery_body_Family
             .sell-main_delivery_body_Family_label 配送までの日数
             .sell-main_delivery_body_Family_span 必須
-          = f.collection_select :delivery_days, @products.all, :id, :name, prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :delivery_days, [["1日~2日で配送",0],["2日~3日で配送",1],["4日~7日で配送",2]], prompt:"選択して下さい", class: "parent_category", name: "parent_box"
       .sell-main_exhibition
         .sell-main_exhibition_title 価格（¥300〜9,999,999)
         .sell-main_delivery_body
