@@ -322,38 +322,65 @@
       }
     }
   }
-  .home-main_pickupContainer{
-    padding: 80px 0 0;
-    background-color: #f8f8f8;
-    height: 100%;
-    .home-main_pickupContainer_head{
-      text-align: center;
-      font-size: 28px;
-      line-height: 1.4;
-      font-weight: bold;
-    }
-    .home-main_pickupContainer_new{
-      margin: 0;
-      padding: 0;
-      .home-main_pickupContainer_new_productHead{
+  .home-main_pickupContainer {
+    .home-main_pickupContainer_content{
+      height: 100%;
+      .home-main_pickupContainer_head {
         text-align: center;
-        .a{
-          font-size: 24px;
-          text-decoration: none;
-          color: #3CCACE;
-        }
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: bold;
       }
-      .home-main_pickupContainer_new_productLists{
-        width: 780px;
-        margin: 26px auto;
+      .index__main__pickupContainer__headbottom {
+        color: rgb(60, 202, 206);
+        text-align: center;
+        font-size: 28px;
+        line-height: 1.4;
+        font-weight: bold;
+      }
+    }
+    .index__main__pickupContainer__lists {
+      text-align: center;
+      width: 220px;
+      height: 245px;
+      margin-left: 240px;
+      justify-content: space-around;
+      .index__main__pickupContainer__lists__list__itemlink{
         display: flex;
-        justify-content: space-around;
+        .index__main__pickupContainer__lists__list__itemlink__items{
+          background-color: white;
+          margin: 50px;
+          .index__header__inner__nav__listsLeft__left-btn{
+            text-decoration: none;
+            .index__main__item__image{
+              width: 220px;
+              height: 150px;
+            }
+            .index__main__pickupContainer__lists__list__itemlink_a{
+              // text-decoration: none;
+              .index__main__pickupContainer__lists__list__itemlink__name{
+                text-decoration: none;
+                display: flex;
+              }
+              .index__main__pickupContainer__lists__list__itemlink__price {
+                text-decoration: none;
+                display: flex;
+              }
+              .index__main__pickupContainer__lists__list__itemlink__soldout {
+                color: red;
+                font-size: 25px;
+              }
+              &__items {
+                padding: 20px;
+              }
+            }
+          }
+        }
       }
     }
   }
   .home-main_pickupContainer{
     padding: 80px 0 0;
-    background-color: #f8f8f8;
     height: 100%;
     .home-main_pickupContainer_head{
       text-align: center;
