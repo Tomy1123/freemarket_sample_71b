@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
   get 'items/new'
   root 'sell#index'
   resources :users, only: [:show,:new]
