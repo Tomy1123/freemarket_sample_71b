@@ -40,14 +40,8 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy
     render :delete unless @item.user_id == current_user.id && @item.destroy
     redirect_to root_path, flash: {alert: '削除しました'}
-    # if @item.destroy
-    #   redirect_to root_path
-    # else
-    #   render :show
-    # end
   end
 
   private
