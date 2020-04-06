@@ -17,17 +17,25 @@
     .content
       .item-box
         .name
-          = @categorie
+          = @item.name
         .body
           %ul.listbox
+            - @item.item_images.first(1).each do |image|
+              =image_tag image.image_url.to_s,class: "index__main__item__image"
           .lists
             %li.list1
+              - @item.item_images.each do |image|
+                =image_tag image.image_url.to_s,class: "index__main__item__image"
             %li.list2
             %li.list3
         .pricebox
-          .price ¥2000
+          .price
+            ¥
+            = @item.price
           .tax (税込み)送料込み
-        .deta カクカク然然
+        .deta
+          .name
+            = @item.text
         .table
           .tbody
             .tr
@@ -35,25 +43,31 @@
               .td hoge
             .tr
               .th カテゴリー
-              .td 
+              .td
+                = @item.category.name
             .tr
               .th ブランド
               .td 
+                = @item.brand
             .tr
               .th 商品のサイズ
               .td 
             .tr
               .th 商品の状態
-              .td hoge
+              .td 
+                = @item.condition
             .tr
               .th 配送料の負担
-              .td hoge
+              .td
+                = @item.trading_status
             .tr
               .th 発送元の地域
-              .td hoge
+              .td 
+                = @item.delivery_area
             .tr
               .th 発送の目安
-              .td hoge
+              .td
+                = @item.delivery_days
         .op
     .comebox
       .text
