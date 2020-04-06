@@ -2,12 +2,17 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
     @item.item_images.build
-    @parent = Categorie.where(id: 1..13)
+    @parent = Category.where(id: 1..13)
   end
   
   def show
-    @item = Item.find_by(params[:id])
-    @categorie = @item.name
+    @item=Item.find(params[:id])
+    @category=@item.category_id
+    # @children=@category.parent
+    # @Grandparent = @children.parent
+    # @parentcategory=@category.parent
+    @images = @item.item_images
+    @image = @images.first
     # @parentcategory=@categorie.parent
   end
 
@@ -32,16 +37,16 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show
-    @item=Item.find(params[:id])
-    @category=@item.category
-    @children=@category.parent
-    @parentcategory=@category.parent
-    @images = @item.item_images
-    @image = @images.first
-    # @comment = Comment.new
-    # @comments = @product.comments.includes(:user)
-  end
+  # def show
+  #   @item=Item.find(params[:id])
+  #   @category=@item.category
+  #   @children=@category.parent
+  #   @parentcategory=@category.parent
+  #   @images = @item.item_images
+  #   @image = @images.first
+  #   # @comment = Comment.new
+  #   # @comments = @product.comments.includes(:user)
+  # end
 
   private
 
@@ -53,7 +58,7 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item)
-            .permit( :name, :text, :category_id, :condition, :brand, :trading_status, :price, :delivery_days,item_images_attributes: [:image_url])
+            .permit( :name, :text, :category_id, :condition, :brand, :trading_status, :price, :delivery_days, :delivery_area, item_images_attributes: [:image_url])
   end
 
 end
