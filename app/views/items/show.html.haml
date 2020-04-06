@@ -26,8 +26,6 @@
             %li.list1
               - @item.item_images.each do |image|
                 =image_tag image.image_url.to_s,class: "index__main__item__image"
-            %li.list2
-            %li.list3
         .pricebox
           .price
             ¥
@@ -36,11 +34,20 @@
         .deta
           .name
             = @item.text
+
         .table
+          -if user_signed_in?
+            -if @item.user_id == current_user.id
+              .index__main__item__content-item
+                = link_to "#" ,class:"index__main__item__content__option2" do
+                  .index__main__item__content__option__edit 商品の編集ページへ
+                = link_to "#" ,class:"index__main__item__content__option" do
+                  .index__main__item__content__option__edit 出品商品の削除
           .tbody
             .tr
               .th 出品者
-              .td hoge
+              .td
+                = @item.user.nickname
             .tr
               .th カテゴリー
               .td
