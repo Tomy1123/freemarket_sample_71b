@@ -1,5 +1,8 @@
 .home-main
   = render "sell_header"
+  .alert
+    - flash.each do |key, value|
+      = content_tag(:div, value, class: key)
   .home-main_mainVisual
     .home-main_mainVisual_content
       %h2.home-main_mainVisual_content_subtitle

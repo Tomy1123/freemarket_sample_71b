@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :set_items,only:[:show,:destroy]
+ 
   def new
     @item = Item.new
     @item.item_images.build
@@ -32,28 +34,21 @@ class ItemsController < ApplicationController
     else
       flash.now[:alert] = '必須事項を入力してください。'
       @item = Item.new
-      @parent = Categorie.where(id: 1..13)
+      @parent = Category.where(id: 1..13)
       render "new"
     end
   end
 
-  # def show
-  #   @item=Item.find(params[:id])
-  #   @category=@item.category
-  #   @children=@category.parent
-  #   @parentcategory=@category.parent
-  #   @images = @item.item_images
-  #   @image = @images.first
-  #   # @comment = Comment.new
-  #   # @comments = @product.comments.includes(:user)
-  # end
+  def destroy
+    render :delete unless @item.user_id == current_user.id && @item.destroy
+    redirect_to root_path, flash: {alert: '削除しました'}
+  end
 
   private
 
 
   def set_items
     @item = Item.find(params[:id])
-
   end
 
   def item_params

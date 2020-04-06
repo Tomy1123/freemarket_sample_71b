@@ -2,6 +2,11 @@
 .home-main{
   box-sizing: border-box;
   @import "home_header";
+  .alert{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+  }
   .home-main_mainVisual{
     background-image: image-url("bg-mainVisual-pict_pc.jpg");
     height: 560px;

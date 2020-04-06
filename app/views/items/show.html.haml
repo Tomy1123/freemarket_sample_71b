@@ -34,15 +34,13 @@
         .deta
           .name
             = @item.text
-
         .table
           -if user_signed_in?
             -if @item.user_id == current_user.id
               .index__main__item__content-item
                 = link_to "#" ,class:"index__main__item__content__option2" do
                   .index__main__item__content__option__edit 商品の編集ページへ
-                = link_to "#" ,class:"index__main__item__content__option" do
-                  .index__main__item__content__option__edit 出品商品の削除
+                = link_to "削除する", item_path(@item), method: :delete, class: "index__main__item__content__option"
           .tbody
             .tr
               .th 出品者
@@ -91,5 +89,3 @@
       %a.a= link_to image_tag("google-play.svg",:size => "180x53")
 .item-footer
   =render "sell/sell_footer"
-.item-btn
-  =render "sell/exhibit_ion"
