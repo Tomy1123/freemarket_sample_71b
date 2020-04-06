@@ -56,23 +56,23 @@
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label 商品の状態
             .sell-main_categorie_body_Family_span 必須
-          = f.select :condition, [["新品、未使用",0],["未使用に近い",1],["目立った傷や汚れなし",2],["やや傷や汚れあり",3],["傷や汚れあり",4],["全体的に状態が悪い",5]], prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :condition, Item.conditions.keys, { prompt: "選択してください"}, {class: 'parent_category'}
       .sell-main_delivery
         .sell-main_delivery_title 配送について
         .sell-main_delivery_body
           .sell-main_delivery_body_Family
             .sell-main_delivery_body_Family_label 配送の負担
             .sell-main_delivery_body_Family_span 必須
-          = f.select :trading_status, [["送料込み(出品者負担)",0],["着払い(購入者負担)",1]],prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :trading_status, Item.trading_statuses.keys, { prompt: "選択してください"}, {class: 'parent_category'}
         .sell-main_delivery_body
           .sell-main_delivery_body_Family
             .sell-main_delivery_body_Family_label 配送元の地域
             .sell-main_delivery_body_Family_span 必須
-          = f.select :trading_status, [["北海道",0],["青森県",1]], prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :delivery_area, Item.delivery_areas.keys, { prompt: "選択してください"}, {class: 'parent_category'}
           .sell-main_delivery_body_Family
             .sell-main_delivery_body_Family_label 配送までの日数
             .sell-main_delivery_body_Family_span 必須
-          = f.select :delivery_days, [["1日~2日で配送",0],["2日~3日で配送",1],["4日~7日で配送",2]], prompt:"選択して下さい", class: "parent_category", name: "parent_box"
+          = f.select :delivery_days, Item.delivery_days.keys, { prompt: "選択してください"}, {class: 'parent_category'}
       .sell-main_exhibition
         .sell-main_exhibition_title 価格（¥300〜9,999,999)
         .sell-main_delivery_body
