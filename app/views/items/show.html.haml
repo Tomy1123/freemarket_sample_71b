@@ -38,7 +38,7 @@
           -if user_signed_in?
             -if @item.user_id == current_user.id
               .index__main__item__content-item
-                = link_to "#" ,class:"index__main__item__content__option2" do
+                = link_to edit_item_path(@item) ,class:"index__main__item__content__option2" do
                   .index__main__item__content__option__edit 商品の編集ページへ
                 = link_to "削除する", item_path(@item), method: :delete, class: "index__main__item__content__option"
           .tbody
@@ -74,6 +74,12 @@
               .td
                 = @item.delivery_days
         .op
+          -if user_signed_in?
+            -if @item.user_id == current_user.id
+            -else
+              .index__main__item__content__commentarea__form__submit__link-Purchase
+                = link_to "#", class: "main-Purchase-btn" do
+                  = "購入する"
     .comebox
       .text
       .come 相手のことを考え丁寧なコメントを心がけましょう。

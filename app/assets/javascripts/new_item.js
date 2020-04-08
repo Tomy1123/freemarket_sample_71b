@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(function(){
   $(function(){
 
     //プレビューのhtmlを定義
@@ -47,6 +47,7 @@ $(document).on('turbolinks:load', function(){
         var html = buildHTML(id);
         //ラベルの直前のプレビュー群にプレビューを追加
         var prevContent = $('.label-content').prev();
+        console.log("newimage")
         $(prevContent).append(html);
 
         //イメージを追加
