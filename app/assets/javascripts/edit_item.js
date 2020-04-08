@@ -31,7 +31,6 @@ $(function(){
       })
       //削除ボタンにidを追加
       $('.delete-box').each(function(index, box){
-        console.log(this)
         $(box).attr('id', `delete_btn_${index}`);
       })
       var count = $('.preview-box').length;
@@ -142,7 +141,6 @@ $(function(){
     });
     // 画像の編集
     $(document).on('click', '.update-box', function() {
-      console.log(this)
       var index_num = $(this).data("update-image-index");
       
     $(`#item_item_images_attributes_${index_num}_image_url`).click();
