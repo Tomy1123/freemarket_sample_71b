@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(function(){
   $(function(){
 
     //プレビューのhtmlを定義
@@ -29,6 +29,7 @@ $(document).on('turbolinks:load', function(){
 
     // プレビューの追加
     $(document).on('change', '.hidden-field', function() {
+      console.log("new")
       setLabel();
       //hidden-fieldのidの数値のみ取得
       var id = $(this).attr('id').replace(/[^0-9]/g, '');
@@ -47,6 +48,7 @@ $(document).on('turbolinks:load', function(){
         var html = buildHTML(id);
         //ラベルの直前のプレビュー群にプレビューを追加
         var prevContent = $('.label-content').prev();
+        console.log("newimage")
         $(prevContent).append(html);
 
         //イメージを追加

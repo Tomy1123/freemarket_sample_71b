@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_items,only:[:show,:destroy]
+  before_action :set_items,only:[:show, :edit, :destroy, :update]
  
   def new
     @item = Item.new
@@ -39,9 +39,19 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    if @item.update(item_update_params)
+       redirect_to root_path controller: :items
+    else
+      flash[:alert] = '必須事項を入力してください。'
+      redirect_to controller: :items, action: :edit
+    end
+  end
+
   def destroy
     render :delete unless @item.user_id == current_user.id && @item.destroy
     redirect_to root_path, flash: {alert: '削除しました'}
+    @item.destroy(item_update_params)
   end
 
   private
@@ -54,6 +64,12 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item)
             .permit( :name, :text, :category_id, :condition, :brand, :trading_status, :price, :delivery_days, :delivery_area, item_images_attributes: [:image_url]).merge(user_id: current_user.id)
+  end
+
+  def item_update_params
+    params.require(:item).permit(
+    :name,:image,
+    [item_images_attributes: [:image_url, :_destroy, :id]])
   end
 
 end
