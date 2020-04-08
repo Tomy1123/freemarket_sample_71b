@@ -29,7 +29,6 @@ $(function(){
 
     // プレビューの追加
     $(document).on('change', '.hidden-field', function() {
-      console.log("new")
       setLabel();
       //hidden-fieldのidの数値のみ取得
       var id = $(this).attr('id').replace(/[^0-9]/g, '');
