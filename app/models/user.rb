@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # has_many :items、 dependent: :destroy
+  has_many :items
   
   # has_many :comments, dependent: :destroy
   # has_many :favorites, dependent: :destroy
@@ -18,4 +18,6 @@ class User < ApplicationRecord
   # has_one :sns_authentication, dependent: :destroy
   # has_one :sending_destination, dependent: :destroy
   # has_one :credit_card, dependent: :destroy
+  has_many :cards
+ 
 end
