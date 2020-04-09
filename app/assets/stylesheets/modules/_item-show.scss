@@ -143,7 +143,21 @@
           }
         }
         .op{
-          height: 100px;
+          text-align: center;
+          height: 55px;
+          .index__main__item__content__commentarea__form__submit__link-Purchase{
+            margin: 0 auto;
+            width: 200px;
+            height: 55px;
+            border-radius:10px;
+            box-shadow:4px 4px #555;
+            line-height: 50px;
+            background-color: red;
+            a{
+              text-decoration: none;
+              color: white;
+            }
+          }
         }
       }
       }
