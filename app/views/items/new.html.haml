@@ -42,11 +42,18 @@
           .sell-main_text_style-body_formerror
       .sell-main_categorie
         .sell-main_categorie_title 商品の詳細
-        .sell-main_categorie_body
-          .sell-main_categorie_body_Family
-            .sell-main_categorie_body_Family_label カテゴリー
-            .sell-main_categorie_body_Family_span 必須
-          = f.collection_select :category_id, @parent, :id, :name, prompt:"選択して下さい", class: "sell-main_categorie_body_select", name: "parent_box"
+        .new__mask__main__right__line
+        .new__mask__main__right__form-contents
+          .new__mask__main__right__form-contents__title
+            .new__mask__main__right__form-contents__title__content 
+              カテゴリ
+            .new__mask__main__right__form-contents__title__color-content 
+              必須
+          .listing-select-wrapper
+            .listing-select-wrapper__box
+            = f.collection_select :category_id, Category.where(id: 1..13, ancestry: nil),:id,:name, {prompt: '選択して下さい'}, {class: 'listing-select-wrapper__box--select', id: 'parent_category',}
+            .listing-product-detail__category
+              .listing-product-detail__category__2
         .sell-main_categorie_body
           .sell-main_categorie_body_Family
             .sell-main_categorie_body_Family_label ブランド
@@ -113,3 +120,4 @@
 = render 'sell/sell_footer'
 
 = javascript_include_tag "new_item.js"
+= javascript_include_tag "channels/category.js"
