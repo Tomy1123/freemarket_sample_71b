@@ -24,9 +24,7 @@ end
   end
   resources :purchase, only: [:index] do
     collection do
-      get 'index', to: 'purchase#index'
       post 'pay', to: 'purchase#pay'
-      get 'done', to: 'purchase#done'
     end
 end
 end
