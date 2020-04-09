@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'items/new'
   root 'sell#index'
   resources :users, only: [:show,:new]
-  resources :items do
+  resources :cards, only: [:new, :show, :destroy] do
+  end
+  resources :items, only: [:new,:show , :create , :edit ,:update , :destroy] do
     collection do
       
       get "buy"
@@ -31,3 +33,6 @@ end
 end
 end
 
+  end
+  # delete  'item_images/:id'  => 'item_images#destroy'
+end
