@@ -49,7 +49,16 @@
             .tr
               .th カテゴリー
               .td
-                = @item.category.name
+                -if @Grandparent.has_parent?
+                -else
+                  =link_to "#",class:"index__main__item__content__table__table__tbody__tr__td__a" do
+                    =@children.parent.name
+                -if @category.has_parent?
+                  =link_to "#",class:"index__main__item__content__table__table__tbody__tr__td__a" do
+                    =@category.parent.name
+                -if @category.has_parent?
+                  =link_to "#",class:"index__main__item__content__table__table__tbody__tr__td__a" do
+                    =@category.name
             .tr
               .th ブランド
               .td 
