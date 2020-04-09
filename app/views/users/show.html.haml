@@ -50,7 +50,7 @@
       %li.nav4
         = link_to "お問い合わせ","#",class:"a"
       %li.nav4
-        = link_to "支払い方法","#",class:"a"
+        = link_to "支払い方法",new_card_path,class:"a"
       %li.nav4
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
   .content
