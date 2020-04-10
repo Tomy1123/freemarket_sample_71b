@@ -1,6 +1,12 @@
 %h2 購入が完了しました！
-%p Apple MacBook Pro 13インチ
-%p ¥135,000(送料込み)
+.order__main__lists__list__listname
+  商品名:
+  .order__main__lists__list__category
+    = @item.name
+.order__main__lists__list__listname
+  商品の価格:
+  .order__main__lists__list__category
+    = @item.price
 
 = link_to root_path do
   商品一覧へ戻る
