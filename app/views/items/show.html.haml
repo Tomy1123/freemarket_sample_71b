@@ -87,7 +87,7 @@
             -if @item.user_id == current_user.id
             -else
               .index__main__item__content__commentarea__form__submit__link-Purchase
-                = link_to purchase_index_path(@item), class: "main-Purchase-btn" do
+                = link_to item_purchase_index_path(@item), class: "main-Purchase-btn" do
                   = "購入する"
     .comebox
       .text
