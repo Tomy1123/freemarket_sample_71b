@@ -1,7 +1,14 @@
+.item-header
+  =render "sell/sell_header"
+.order__main__lists__list__listname
+  商品名:
+  .order__main__lists__list__category
+    = @item.name
+.order__main__lists__list__listname
+  商品の価格:
+  .order__main__lists__list__category
+    = @item.price
 %h2 購入を確定しますか？
-%p Apple MacBook Pro 13インチ
-%p ¥135,000(送料込み)
-%br
 %h3 支払い方法
 - if @default_card_information.blank?
   %br /
@@ -14,3 +21,5 @@
 %br
 = form_tag(action: :pay, method: :post) do
   %button 購入する
+.item-footer
+  =render "sell/sell_footer"

@@ -110,6 +110,10 @@
                   .index__main__pickupContainer__lists__list__itemlink__price__price-price
                     = item.price
                     %p.index__main__pickupContainer__lists__list__itemlink__soldout
+                -# -if product.purchaser_id.present? 
+                -#   .items-box_photo__sold
+                -#     .items-box_photo__sold__inner
+                -#       SOLD
   .home-main_pickupContainer
     %h2.home-main_pickupContainer_head
       ピックアップブランド
