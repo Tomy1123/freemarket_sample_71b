@@ -33,8 +33,8 @@ class PurchaseController < ApplicationController
   end
 
   def done
-    @item_purchaser= Item.find(params[:item_id])#購入者のidをpurchaser_idに保存
-    @item_purchaser.update( purchaser_id: current_user.id)
+    @item= Item.find(params[:item_id])#購入者のidをpurchaser_idに保存
+    @item.update( purchaser_id: current_user.id)
   end
 
   def set_card
